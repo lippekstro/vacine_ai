@@ -22,17 +22,18 @@ require_once __DIR__ . "/templates/_cabecalho.php";
             <h2>Vacine<span>Ai</span></h2>
         </div>
 
-        <nav>
-            <a href="#">Início</a>
-            <a href="#">Recursos</a>
-            <a href="#">Sobre</a>
-            <a href="#">Dúvidas</a>
-            <a href="#">Contato</a>
+        <nav class= "menu">
+            <a href="#" class= "menu-link">Início</a>
+            <a href="#" class= "menu-link">Recursos</a>
+            <a href="#" class= "menu-link" >Sobre</a>
+            <a href="#" class= "menu-link">Dúvidas</a>
+            <a href="#" class= "menu-link">Contato</a>
         </nav>
 
         <div class="botoes-topo">
-            <button class="entrar">Entrar</button>
-            <button class="criar">Criar Conta</button>
+            <a href="#" class="botoes">Login</a>
+            <a href="#" class="botoes">Criar Conta</a>
+       
         </div>
 
     </header>
@@ -74,7 +75,7 @@ require_once __DIR__ . "/templates/_cabecalho.php";
                 <!-- txt 3-->
                 <h5> Para toda a família </h5>
                 <!-- txt 4 -->
-                <h5> sSegurança e privacidade </h5>
+                <h5> Segurança e privacidade </h5>
 
             </div>
 
@@ -101,18 +102,49 @@ require_once __DIR__ . "/templates/_cabecalho.php";
 
             </div>
 
+<! ---------------------------------SESSAO DO CARROSSEL ------------------------------------ --!>
+
+
     </section>
 
-    <!-- sessao 2  -->
-    <section class="img_banner">
-        <!-- imagem 1 -->
-        <img src="colocar_ainda.png">
-        <!-- imagem 2 -->
-        <img src="colocar_ainda.png">
-        <!-- imagem 3-->
-        <img src="colocar_ainda.png">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-autoplay="true">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="vacine_ai/imgs/banner-1.png" class="d-block w-100 rounded-5" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="/vacine_ai/imgs/banner-2.png" class="d-block w-100 rounded-5" alt="...">
+            </div>
+            <div class="carousel-item">
+        
 
-        <!-- ta faltando as bolinhas de transicao que fica em baixo do banner.. to em duvida se é um forms.. depois eu coloco-->
+            <img src="./imgs/banner-3.png" class="d-block w-100 rounded-5" alt="...">
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div>
+            <button class="btn-icon btn-sm carousel-control-play-pause" type="button" data-bs-target="#carouselExampleAutoplaying" aria-label="Pause" data-bs-pause-label="Pause" data-bs-play-label="Play">
+                <span class="carousel-icon-pause" aria-hidden="true"></span>
+                <span class="carousel-icon-play" aria-hidden="true"></span>
+            </button>
+            <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-icon-prev" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-icon-next" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        </div>
+        </div>
+
     </section>
 </main>
 
