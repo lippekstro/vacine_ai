@@ -42,22 +42,24 @@ Orientações para profissionais de saúde: A vacina BCG, uma vez reconstituída
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>A Hepatite B é uma doença infecciosa crônica de relevância em saúde pública, causada pelo vírus da hepatite B (HBV). Frequentemente chamada de "doença silenciosa", a hepatite B pode não apresentar sintomas nas fases iniciais, o que dificulta o diagnóstico precoce. Quando não tratada, especialmente em sua forma crônica, pode evoluir para complicações graves, como cirrose, insuficiência hepática e até câncer de fígado.
+        <strong>
+          <ul>
+          <li><p>É uma doença infecciosa crônica de relevância em saúde pública, causada pelo vírus da hepatite B (HBV). Frequentemente chamada de "doença silenciosa", a hepatite B pode não apresentar sintomas nas fases iniciais, o que dificulta o diagnóstico precoce. Quando não tratada, especialmente em sua forma crônica, pode evoluir para complicações graves, como cirrose, insuficiência hepática e até câncer de fígado.</p></li>
+<li><p>Na maioria dos casos não apresenta sintomas e muitas vezes é diagnosticada décadas após a infecção, com sinais relacionados a outras doenças do fígado.</p></li>
 
-Na maioria dos casos não apresenta sintomas e muitas vezes é diagnosticada décadas após a infecção, com sinais relacionados a outras doenças do fígado.
+<li><p>A principal forma de prevenção é por meio da vacinação. A vacina para hepatite B é indicada para todas as pessoas que ainda não tenham sido vacinadas, de todas as idades, em três doses. Mantenha o seu calendário vacinal em dia para se prevenir contra a infecção causada pela hepatite B e outras doenças.</p></li>
 
-A principal forma de prevenção é por meio da vacinação. A vacina para hepatite B é indicada para todas as pessoas que ainda não tenham sido vacinadas, de todas as idades, em três doses. Mantenha o seu calendário vacinal em dia para se prevenir contra a infecção causada pela hepatite B e outras doenças.
+<h3>Transmissão:</h3>
+<p>A hepatite B pode ser transmitida sexualmente e por contato com sangue contaminado (via parenteral, percutânea e vertical). As principais formas de transmissão do vírus da hepatite B (HBV) são: relações sexuais sem preservativo com uma pessoa infectada; compartilhamento de seringas, agulhas e outros materiais para uso de drogas (ex.: cachimbos, canudos); compartilhamento de materiais de higiene pessoal (lâminas de barbear e depilar, escovas de dente, alicates de unha ou outros objetos que furam ou cortam);  transfusões de sangue (mais relacionadas ao período anterior a 1993);  realização de tatuagens, colocação de piercings e procedimentos odontológicos, cirúrgicos, médicos e de hemodiálise, quando as normas de biossegurança não são atendidas de maneira adequada.</p>
 
-Transmissão
-A hepatite B pode ser transmitida sexualmente e por contato com sangue contaminado (via parenteral, percutânea e vertical). As principais formas de transmissão do vírus da hepatite B (HBV) são: relações sexuais sem preservativo com uma pessoa infectada; compartilhamento de seringas, agulhas e outros materiais para uso de drogas (ex.: cachimbos, canudos); compartilhamento de materiais de higiene pessoal (lâminas de barbear e depilar, escovas de dente, alicates de unha ou outros objetos que furam ou cortam);  transfusões de sangue (mais relacionadas ao período anterior a 1993);  realização de tatuagens, colocação de piercings e procedimentos odontológicos, cirúrgicos, médicos e de hemodiálise, quando as normas de biossegurança não são atendidas de maneira adequada.
+<p>A hepatite B também pode ser transmitida da mãe para o filho durante a gestação ou durante o parto, sendo esta via denominada de transmissão vertical. Esse tipo de transmissão, caso não seja evitada, pode implicar em uma evolução desfavorável para o bebê, que apresenta maior chance de desenvolver a hepatite B crônica.</p>
 
-A hepatite B também pode ser transmitida da mãe para o filho durante a gestação ou durante o parto, sendo esta via denominada de transmissão vertical. Esse tipo de transmissão, caso não seja evitada, pode implicar em uma evolução desfavorável para o bebê, que apresenta maior chance de desenvolver a hepatite B crônica.
+<p>A investigação para hepatite B deve ser feita em todas as gestantes a partir do primeiro trimestre ou quando do início do pré-natal (primeira consulta), sendo que o exame pode ser feito por meio laboratorial e/ou testes rápidos. Para gestantes com resultado de teste rápido para hepatite B não reagente e sem histórico de vacinação prévia, recomenda-se a vacinação em 3 doses.</p>
 
-A investigação para hepatite B deve ser feita em todas as gestantes a partir do primeiro trimestre ou quando do início do pré-natal (primeira consulta), sendo que o exame pode ser feito por meio laboratorial e/ou testes rápidos. Para gestantes com resultado de teste rápido para hepatite B não reagente e sem histórico de vacinação prévia, recomenda-se a vacinação em 3 doses.
+<p>As gestantes que apresentem resultado do teste rápido reagente para hepatite B  deverão complementar a avaliação com solicitação de exame específico, como a carga viral da hepatite B e, caso confirmado o resultado, a gestante pode ter indicação de profilaxia com tenofovir (TDF) a partir do 3º trimestre da gestação, caso atenda aos critérios estabelecidos no PCDT de Prevenção da Transmissão Vertical e no PCDT de Hepatite B e Coinfecções.</p>
 
-As gestantes que apresentem resultado do teste rápido reagente para hepatite B  deverão complementar a avaliação com solicitação de exame específico, como a carga viral da hepatite B e, caso confirmado o resultado, a gestante pode ter indicação de profilaxia com tenofovir (TDF) a partir do 3º trimestre da gestação, caso atenda aos critérios estabelecidos no PCDT de Prevenção da Transmissão Vertical e no PCDT de Hepatite B e Coinfecções.
-
-Para todas as crianças exposta à hepatite B durante a gestação está recomendada a vacina para hepatite B e imunoglobulina humana anti-hepatite B (IGHAHB), preferencialmente nas primeiras 24 horas do pós-parto – essas medidas realizadas em conjunto previnem a transmissão perinatal da hepatite B em mais de 90% dos recém-nascidos. A referência à maternidade/casa de parto é de responsabilidade da equipe de saúde que acompanha a gestante com hepatite B e deve ser documentada no cartão da gestante.</strong> <code></code>, 
+<p>Para todas as crianças exposta à hepatite B durante a gestação está recomendada a vacina para hepatite B e imunoglobulina humana anti-hepatite B (IGHAHB), preferencialmente nas primeiras 24 horas do pós-parto – essas medidas realizadas em conjunto previnem a transmissão perinatal da hepatite B em mais de 90% dos recém-nascidos. A referência à maternidade/casa de parto é de responsabilidade da equipe de saúde que acompanha a gestante com hepatite B e deve ser documentada no cartão da gestante.</p>
+</ul></strong> <code></code>, 
       </div>
     </div>
   </div>
@@ -96,6 +98,16 @@ Asplenia anatômica ou funcional e doenças relacionadas.</strong> <code></code>
     </div>
   </div>
 </div>
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+       FEBRE AMARELA
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>  é uma doença infecciosa febril aguda causada por um vírus do gênero Flavivirus e transmitida exclusivamente pela picada de mosquitos infectados. A doença não é contagiosa, o que significa que não há transmissão direta de uma pessoa para outra. Ela possui uma taxa de letalidade que pode variar entre 20% e 50% nos casos graves.
+        </strong>
 </main>
 
 
