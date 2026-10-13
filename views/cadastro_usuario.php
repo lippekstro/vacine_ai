@@ -54,7 +54,6 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                 >
                             </div>
 
-
                             <div class="mb-3">
                                 <label for="dataNascimento" class="form-label">
                                     Data de nascimento
@@ -73,17 +72,17 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                     CPF
                                 </label>
                                 <input
-                                    type="number"
+                                    type="text"
                                     class="form-control"
                                     id="cpf"
-                                    placeholder="Digite seu CPF"
+                                    placeholder="123.456.789-00"
                                     required
                                 >
                             </div>
 
                              <div class="mb-3">
                                 <label for="genero" class="form-label">
-                                    Genero
+                                    Gênero
                                 </label>
                                 <input
                                     type="text"
@@ -99,7 +98,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                     Telefone
                                 </label>
                                 <input
-                                    type="number"
+                                    type="tel"
                                     class="form-control"
                                     id="telefone"
                                     placeholder="(00) 00000-0000"
@@ -147,18 +146,6 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                 >
                             </div>
 
-                            <div class="form-check mb-4">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="termos"
-                                    required
-                                >
-                                <label class="form-check-label" for="termos">
-                                    Aceito os termos de uso
-                                </label>
-                            </div>
-
                             <button
                                 type="submit"
                                 class="btn btn-primary w-100"
@@ -173,10 +160,8 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                 Entrar
                             </a>
                         </p>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
