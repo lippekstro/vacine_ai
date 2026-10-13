@@ -41,7 +41,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                 >
                             </div>
 
-                            <div class="mb-3">
+                             <div class="mb-3">
                                 <label for="email" class="form-label">
                                     E-mail
                                 </label>
@@ -53,6 +53,73 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                     required
                                 >
                             </div>
+
+
+                            <div class="mb-3">
+                                <label for="dataNascimento" class="form-label">
+                                    Data de nascimento
+                                </label>
+                                <input
+                                    type="date"
+                                    class="form-control"
+                                    id="dataNascimento"
+                                    placeholder="Digite sua data de nascimento"
+                                    required
+                                >
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="cpf" class="form-label">
+                                    CPF
+                                </label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="cpf"
+                                    placeholder="Digite seu CPF"
+                                    required
+                                >
+                            </div>
+
+                             <div class="mb-3">
+                                <label for="genero" class="form-label">
+                                    Genero
+                                </label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="genero"
+                                    placeholder=""
+                                    required
+                                >
+                            </div>
+
+                             <div class="mb-3">
+                                <label for="telefone" class="form-label">
+                                    Telefone
+                                </label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="telefone"
+                                    placeholder="(00) 00000-0000"
+                                    required
+                                >
+                            </div>
+
+                             <div class="mb-3">
+                                <label for="foto" class="form-label">
+                                    Foto de perfil
+                                </label>
+                                <input
+                                    type="file"
+                                    class="form-control"
+                                    id="foto"
+                                    placeholder="Selecione uma imagem"
+                                    required
+                                >
+                            </div>
+
 
                             <div class="mb-3">
                                 <label for="senha" class="form-label">
