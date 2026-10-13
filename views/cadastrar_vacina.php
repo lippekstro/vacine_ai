@@ -4,40 +4,69 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
 <main>
     <form>
-        <fieldset qualified>
-            <legend>Cadastrar vacinas</legend>
-            <div class="mb-3">
-                <label for="disabledTextInput" class="form-label">Qual a vacina ?</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Selecione a vacina</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-                <div class="mb-3">
-                    <label for="disabledSelect" class="form-label">Qual dose ?</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Selecione a vacina</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+        <div class="caixa-formulario">
+
+            <h1>💉 Cadastrar Vacina</h1>
+            <p class="subtitulo">
+                Registre a aplicação e acompanhe a próxima dose.
+            </p>
+
+            <form action="" method="POST">
+
+                <div class="grupo">
+                    <label for="vacina">Qual a vacina?</label>
+                    <select name="vacina" id="vacina" required>
+                        <option value="">Selecione uma vacina</option>
+                        <option value="1">BCG</option>
+                        <option value="2">Gripe</option>
+                        <option value="3">Febre Amarela</option>
                     </select>
                 </div>
-                <legend>Data da aplicação</legend>
-                <div class="mb-3">
-                    <label for="data-vacina" type="date"></label>
-                    <input class="data-vacina" type="date">
+
+                <div class="grupo">
+                    <label for="dose">Qual dose?</label>
+                    <select name="dose" id="dose" required>
+                        <option value="">Selecione uma dose</option>
+                        <option value="1">1º dose</option>
+                        <option value="2">2º dose</option>
+                        <option value="3">3º dose</option>
+
+                    </select>
                 </div>
-                <legend>Data da próxima vacinação</legend>
-                <div class="mb-3">
-                    <label for="prox-vacina" type="date"></label>
-                    <input class="prox-vacina" type="date">
+
+                <div class="grupo">
+                    <label for="data_aplicacao">
+                        Data da aplicação
+                    </label>
+                    <input
+                        type="date"
+                        name="data_aplicacao"
+                        id="data_aplicacao"
+                        required>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-        </fieldset>
+
+                <div class="grupo">
+                    <label for="proxima_vacinacao">
+                        Data da próxima vacinação
+                    </label>
+                    <input
+                        type="date"
+                        name="proxima_vacinacao"
+                        id="proxima_vacinacao">
+                </div>
+
+                <button type="submit" class="botao-cadastrar">
+                    Cadastrar vacina
+                </button>
+
+            </form>
+
+        </div>
     </form>
 
 </main>
+
+
 
 
 <?php
