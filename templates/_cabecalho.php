@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/vacine_ai/css/bootstrap.css">
     <script src="/vacine_ai/js/bootstrap.js" defer></script>
 
+    <link rel="stylesheet" href="/vacine_ai/css/style.css">
+
 
 </head>
 
