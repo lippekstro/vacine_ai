@@ -6,7 +6,7 @@ require_once __DIR__ . "/templates/_cabecalho.php";
 
 <main>
 
-<!--falta fazer:
+    <!--falta fazer:
   1. link do java
   2. link dos icones caso formos usar google icone
   3. as bolinhas do banner
@@ -22,18 +22,18 @@ require_once __DIR__ . "/templates/_cabecalho.php";
             <h2>Vacine<span>Ai</span></h2>
         </div>
 
-        <nav class= "menu">
-            <a href="#" class= "menu-link">Início</a>
-            <a href="#" class= "menu-link">Recursos</a>
-            <a href="#" class= "menu-link" >Sobre</a>
-            <a href="#" class= "menu-link">Dúvidas</a>
-            <a href="#" class= "menu-link">Contato</a>
+        <nav class="menu">
+            <a href="#" class="menu-link">Início</a>
+            <a href="#" class="menu-link">Recursos</a>
+            <a href="#" class="menu-link">Sobre</a>
+            <a href="#" class="menu-link">Dúvidas</a>
+            <a href="#" class="menu-link">Contato</a>
         </nav>
 
         <div class="botoes-topo">
             <a href="#" class="botoes">Login</a>
             <a href="#" class="botoes">Criar Conta</a>
-       
+
         </div>
 
     </header>
@@ -102,48 +102,34 @@ require_once __DIR__ . "/templates/_cabecalho.php";
 
             </div>
 
-<! ---------------------------------SESSAO DO CARROSSEL ------------------------------------ --!>
+
 
 
     </section>
 
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-autoplay="true">
-            <div class="carousel-inner">
+    <!-- ---------------------------------SESSAO DO CARROSSEL ------------------------------------ -->
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="vacine_ai/imgs/banner-1.png" class="d-block w-100 rounded-5" alt="...">
+                <img src="/vacine_ai/imgs/banner-1.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-            <img src="/vacine_ai/imgs/banner-2.png" class="d-block w-100 rounded-5" alt="...">
+                <img src="/vacine_ai/imgs/banner-2.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-        
-
-            <img src="./imgs/banner-3.png" class="d-block w-100 rounded-5" alt="...">
+                <img src="/vacine_ai/imgs/banner-3.png" class="d-block w-100" alt="...">
             </div>
         </div>
-
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div>
-            <button class="btn-icon btn-sm carousel-control-play-pause" type="button" data-bs-target="#carouselExampleAutoplaying" aria-label="Pause" data-bs-pause-label="Pause" data-bs-play-label="Play">
-                <span class="carousel-icon-pause" aria-hidden="true"></span>
-                <span class="carousel-icon-play" aria-hidden="true"></span>
-            </button>
-            <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                <span class="carousel-icon-prev" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="btn-icon btn-sm" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                <span class="carousel-icon-next" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            </div>
-        </div>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
     </section>
 </main>
