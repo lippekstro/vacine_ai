@@ -108,11 +108,11 @@ require_once __DIR__ . "/templates/_cabecalho.php";
     </section>
 
     <!-- ---------------------------------SESSAO DO CARROSSEL ------------------------------------ -->
-
+<section class="container">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/vacine_ai/imgs/banner-1.png" class="d-block w-100" alt="...">
+                <img src="/vacine_ai/imgs/banner-4.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
                 <img src="/vacine_ai/imgs/banner-2.png" class="d-block w-100" alt="...">
