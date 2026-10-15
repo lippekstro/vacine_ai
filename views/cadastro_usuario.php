@@ -37,6 +37,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                     class="form-control"
                                     id="nome"
                                     placeholder="Digite seu nome"
+                                    autofocus
                                     required
                                 >
                             </div>
