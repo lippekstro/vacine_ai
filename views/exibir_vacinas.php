@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once __DIR__ . "/../templates/_cabecalho.php";
 ?>
 
@@ -95,6 +95,6 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 </html>
 
 
-<?php 
+<?php
 require_once __DIR__ . "/../templates/_rodape.php";
 ?>
