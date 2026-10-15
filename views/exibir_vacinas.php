@@ -17,7 +17,6 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
   <div class="row justify-content-center">
     <div class="col-lg-10">
 
-      <!-- Card do Perfil -->
       <div class="card shadow-sm mb-4">
         <div class="card-body d-flex align-items-center gap-3">
           <img src="https://via.placeholder.com/80" class="rounded-circle" alt="Avatar">
@@ -79,7 +78,6 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
         <!-- ABA FALTANTES -->
         <div class="tab-pane fade" id="faltantes" role="tabpanel">
           <div class="list-group" id="listaFaltantes">
-            <!-- Preenchido via JS -->
           </div>
         </div>
 
