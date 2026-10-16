@@ -68,14 +68,12 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
       <div class="tab-content bg-white p-4 border border-top-0 rounded-bottom shadow-sm">
 
-        <!-- ABA TOMADAS -->
         <div class="tab-pane fade show active" id="tomadas" role="tabpanel">
           <div class="list-group" id="listaTomadas">
             <!-- Preenchido via JS -->
           </div>
         </div>
 
-        <!-- ABA FALTANTES -->
         <div class="tab-pane fade" id="faltantes" role="tabpanel">
           <div class="list-group" id="listaFaltantes">
           </div>
