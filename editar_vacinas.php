@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               </div>
 
               <div class="card-body">
+                <!-- Checkbox tomada -->
                 <div class="form-check mb-3">
                   <input class="form-check-input" type="checkbox"
                          name="vacinas[<?= $i ?>][tomada]"
