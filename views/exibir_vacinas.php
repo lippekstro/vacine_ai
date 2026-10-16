@@ -1,5 +1,5 @@
 <?php
-require 'dados.php';
+require '../dados.php';
 
 $tomadas   = array_filter($vacinas, fn($v) => $v['status'] === 'tomada');
 $faltantes = array_filter($vacinas, fn($v) => $v['status'] === 'faltante');
@@ -57,77 +57,73 @@ function dataBr($data) {
       </div>
     </div>
 
-    <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tomadas" type="button">
-          <i class="bi bi-check2-circle"></i> Vacinas Tomadas
-        </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#faltantes" type="button">
-          <i class="bi bi-clock-history"></i> Vacinas Faltantes
-        </button>
-      </li>
-    </ul>
+    <div class="mb-5">
+      <h4 class="mb-3 text-success">
+        <i class="bi bi-shield-check"></i> Vacinas Tomadas
+        <span class="badge bg-success"><?= count($tomadas) ?></span>
+      </h4>
 
-    <div class="tab-content bg-white p-4 border border-top-0 rounded-bottom shadow-sm">
-
-      <div class="tab-pane fade show active" id="tomadas">
-        <?php if (empty($tomadas)): ?>
-          <p class="text-muted text-center mb-0">Nenhuma vacina tomada registrada.</p>
-        <?php else: ?>
-          <div class="row g-3">
-            <?php foreach ($tomadas as $v): ?>
-              <div class="col-md-6 col-lg-4">
-                <div class="card h-100 border-success shadow-sm">
-                  <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
-                    <span><i class="bi bi-shield-check"></i> Tomada</span>
-                    <span class="badge bg-light text-success"><?= htmlspecialchars($v['dose']) ?></span>
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title mb-2"><?= htmlspecialchars($v['nome']) ?></h5>
-                    <p class="card-text text-muted mb-0">
-                      <i class="bi bi-calendar-check"></i>
-                      Aplicada em <?= dataBr($v['data']) ?>
-                    </p>
-                  </div>
+      <?php if (empty($tomadas)): ?>
+        <div class="alert alert-light border text-center mb-0">
+          Nenhuma vacina tomada registrada.
+        </div>
+      <?php else: ?>
+        <div class="row g-3">
+          <?php foreach ($tomadas as $v): ?>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-success shadow-sm">
+                <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                  <span><i class="bi bi-check-circle"></i> Tomada</span>
+                  <span class="badge bg-light text-success"><?= htmlspecialchars($v['dose']) ?></span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title mb-2"><?= htmlspecialchars($v['nome']) ?></h5>
+                  <p class="card-text text-muted mb-0">
+                    <i class="bi bi-calendar-check"></i>
+                    Aplicada em <?= dataBr($v['data']) ?>
+                  </p>
                 </div>
               </div>
-            <?php endforeach; ?>
-          </div>
-        <?php endif; ?>
-      </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+    </div>
 
-      <div class="tab-pane fade" id="faltantes">
-        <?php if (empty($faltantes)): ?>
-          <p class="text-muted text-center mb-0">Você está em dia! 🎉</p>
-        <?php else: ?>
-          <div class="row g-3">
-            <?php foreach ($faltantes as $v): ?>
-              <div class="col-md-6 col-lg-4">
-                <div class="card h-100 border-warning shadow-sm">
-                  <div class="card-header bg-warning text-dark d-flex justify-content-between align-items-center">
-                    <span><i class="bi bi-exclamation-triangle"></i> Pendente</span>
-                    <span class="badge bg-dark"><?= htmlspecialchars($v['dose']) ?></span>
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title mb-2"><?= htmlspecialchars($v['nome']) ?></h5>
-                    <p class="card-text text-muted mb-0">
-                      <i class="bi bi-calendar-x"></i> Ainda não aplicada
-                    </p>
-                  </div>
+    <div class="mb-5">
+      <h4 class="mb-3 text-warning">
+        <i class="bi bi-clock-history"></i> Vacinas Faltantes
+        <span class="badge bg-warning text-dark"><?= count($faltantes) ?></span>
+      </h4>
+
+      <?php if (empty($faltantes)): ?>
+        <div class="alert alert-success text-center mb-0">
+          🎉 Você está em dia com todas as vacinas!
+        </div>
+      <?php else: ?>
+        <div class="row g-3">
+          <?php foreach ($faltantes as $v): ?>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-warning shadow-sm">
+                <div class="card-header bg-warning text-dark d-flex justify-content-between align-items-center">
+                  <span><i class="bi bi-exclamation-triangle"></i> Pendente</span>
+                  <span class="badge bg-dark"><?= htmlspecialchars($v['dose']) ?></span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title mb-2"><?= htmlspecialchars($v['nome']) ?></h5>
+                  <p class="card-text text-muted mb-0">
+                    <i class="bi bi-calendar-x"></i> Ainda não aplicada
+                  </p>
                 </div>
               </div>
-            <?php endforeach; ?>
-          </div>
-        <?php endif; ?>
-      </div>
-
+            </div>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
     </div>
 
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
