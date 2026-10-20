@@ -4,7 +4,7 @@ require_once __DIR__ . "/templates/_cabecalho.php";
 
 
 
-<main class="m-5">
+<main class="mt-0">
 
     <!--falta fazer:
   1. link do java
@@ -23,62 +23,11 @@ require_once __DIR__ . "/templates/_cabecalho.php";
 
         <!--_____________ coluna 1 ____________ -->
         <div class="info_1">
-            <h1>
-                Cuidar da sua saúde começa pela
-                <span>prevenção.</span>
-            </h1>
 
-            <p>
-                O VacineAi organiza sua carteira de vacinação,
-                lembra das próximas doses e protege você e sua família.
-            </p>
+            <img class="imagem-principal" src="imgs/inicio.jpg" alt="">
+            
 
-
-            <!-- ______________ coluna 2 (CENTRO) _________________-->
-            <div class="img_central">
-                <img src="colocar_ainda.png">
-                <!-- icone 1 (calendario)  -->
-                <img src="colocar_ainda.png">
-                <!-- icone 2 (sino)-->
-                <img src="colocar_ainda.png">
-                <!-- icone 3 (familia)-->
-                <img src="colocar_ainda.png">
-                <!-- icone 4 (escudo de segurança) -->
-                <img src="colocar_ainda.png">
-
-                <!-- txt 1 -->
-                <h5> Organize sua carteira</h5>
-                <!-- txt 2 -->
-                <h5> Receba lembretes</h5>
-                <!-- txt 3-->
-                <h5> Para toda a família </h5>
-                <!-- txt 4 -->
-                <h5> Segurança e privacidade </h5>
-
-            </div>
-
-
-            <!-- ______________ coluna 3 ___________ -->
-            <div class="card-vacinas">
-
-                <h3>Próximas doses</h3>
-
-                <div class="vacina">
-                    <p>Hepatite B</p>
-                    <span>7 dias</span>
-                </div>
-
-                <div class="vacina">
-                    <p>Febre Amarela</p>
-                    <span>37 dias</span>
-                </div>
-
-                <div class="vacina">
-                    <p>HPV</p>
-                    <span>63 dias</span>
-                </div>
-
-            </div>
+        </div>
 
 
 

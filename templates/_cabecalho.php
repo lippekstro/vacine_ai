@@ -15,11 +15,11 @@
 </head>
 
 <body>
-     <header>
+    <header>
 
         <!-- ____________ TOPO ___________ -->
-        <div class="logo">
-            <img src="imagens/logo.png">
+        <div class="logo">      
+            <img class="" src="/vacine_ai/imgs/logo.jpg" alt="">
             <h2>Vacine<span>Ai</span></h2>
         </div>
 
