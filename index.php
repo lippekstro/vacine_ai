@@ -4,7 +4,7 @@ require_once __DIR__ . "/templates/_cabecalho.php";
 
 
 
-<main>
+<main class="m-5">
 
     <!--falta fazer:
   1. link do java
@@ -14,34 +14,12 @@ require_once __DIR__ . "/templates/_cabecalho.php";
 -->
 
 
-    <header>
-
-        <!-- ____________ TOPO ___________ -->
-        <div class="logo">
-            <img src="imagens/logo.png">
-            <h2>Vacine<span>Ai</span></h2>
-        </div>
-
-        <nav class="menu">
-            <a href="#" class="menu-link">Início</a>
-            <a href="#" class="menu-link">Recursos</a>
-            <a href="#" class="menu-link">Sobre</a>
-            <a href="#" class="menu-link">Dúvidas</a>
-            <a href="#" class="menu-link">Contato</a>
-        </nav>
-
-        <div class="botoes-topo">
-            <a href="#" class="botoes">Login</a>
-            <a href="#" class="botoes">Criar Conta</a>
-
-        </div>
-
-    </header>
+   
 
 
 
     <!--___________ primeira sessao________ -->
-    <section>
+    <section class="mt-3">
 
         <!--_____________ coluna 1 ____________ -->
         <div class="info_1">
@@ -108,28 +86,30 @@ require_once __DIR__ . "/templates/_cabecalho.php";
     </section>
 
     <!-- ---------------------------------SESSAO DO CARROSSEL ------------------------------------ -->
-<section class="container">
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="/vacine_ai/imgs/banner-4.jpg" class="d-block w-100" alt="...">
+    <section class="container">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/vacine_ai/imgs/banner-1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/vacine_ai/imgs/banner-2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/vacine_ai/imgs/banner-3.png" class="d-block w-100" alt="...">
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="/vacine_ai/imgs/banner-2.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="/vacine_ai/imgs/banner-3.png" class="d-block w-100" alt="...">
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
 
     </section>
 </main>

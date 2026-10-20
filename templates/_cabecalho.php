@@ -15,3 +15,26 @@
 </head>
 
 <body>
+     <header>
+
+        <!-- ____________ TOPO ___________ -->
+        <div class="logo">
+            <img src="imagens/logo.png">
+            <h2>Vacine<span>Ai</span></h2>
+        </div>
+
+        <nav class="menu">
+            <a href="#" class="menu-link">Início</a>
+            <a href="#" class="menu-link">Recursos</a>
+            <a href="#" class="menu-link">Sobre</a>
+            <a href="#" class="menu-link">Dúvidas</a>
+            <a href="#" class="menu-link">Contato</a>
+        </nav>
+
+        <div class="botoes-topo">
+            <a href="#" class="botoes">Login</a>
+            <a href="#" class="botoes">Criar Conta</a>
+
+        </div>
+
+    </header>
