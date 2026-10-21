@@ -19,20 +19,50 @@ require_once __DIR__ . "/templates/_cabecalho.php";
 
 
     <!--___________ primeira sessao________ -->
-    <section class="mt-3">
-
-        <!--_____________ coluna 1 ____________ -->
-        <div class="info_1">
-
-            <img class="imagem-principal" src="imgs/inicio.jpg" alt="">
-            
-
+<div class="hero-container">
+        <!-- Lado Esquerdo: Texto (Sem Botões) -->
+        <div class="text-section">
+            <h1>Cuidar da sua saúde<br>começa pela <span>prevenção.</span></h1>
+            <p>O VacineAi organiza sua carteira de vacinação, lembra você das próximas doses e protege o que mais importa: você e sua família.</p>
         </div>
 
+        <!-- Lado Direito: Estrutura do Carrossel -->
+        <div class="carousel-section">
+            
+            <!-- Card 1: Próximas Doses -->
+            <div class="carousel-card">
+                <div class="carousel-header">
+                    <h3>Próximas doses</h3>
+                    <a href="#">Ver todas</a>
+                </div>
+                <!-- Estrutura dos itens do carrossel/lista -->
+                <div class="card-dose-item">
+                    <!-- Espaço para ícone -->
+                    <div>
+                        <h4>Hepatite B - 3ª dose</h4>
+                        <small>10/09/2026</small>
+                    </div>
+                </div>
+                <div class="card-dose-item">
+                    <!-- Espaço para ícone -->
+                    <div>
+                        <h4>Febre Amarela - Reforço</h4>
+                        <small>20/10/2026</small>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Card 2: Banner Secundário do Carrossel -->
+            <div class="carousel-card banner-card">
+                <!-- Espaço para imagem do celular -->
+                <div>
+                    <h3 style="color: #0c2b3e; margin-bottom: 5px;">Nunca mais esqueça uma dose!</h3>
+                    <p style="font-size: 0.8rem; color: #334e5e;">Ative seus lembretes e fique sempre protegido.</p>
+                </div>
+            </div>
 
-
-    </section>
+        </div>
+    </div>
 
     <!-- ---------------------------------SESSAO DO CARROSSEL ------------------------------------ -->
     <section class="container">

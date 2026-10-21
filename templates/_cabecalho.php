@@ -19,7 +19,7 @@
 
         <!-- ____________ TOPO ___________ -->
         <div class="logo">      
-            <img class="" src="/vacine_ai/imgs/logo.jpg" alt="">
+            <img class="" src="" alt="">
             <h2>Vacine<span>Ai</span></h2>
         </div>
 

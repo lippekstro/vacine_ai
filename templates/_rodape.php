@@ -1,5 +1,5 @@
     <footer>
-        <img src="/vacine_ai/imgs/teste2.png" alt="">
+        <img src="/vacine_ai/imgs/rodape.png" alt="">
     </footer>
     </body>
 
