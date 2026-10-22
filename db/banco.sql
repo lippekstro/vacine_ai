@@ -27,5 +27,8 @@ CREATE TABLE vacinacao {
     id_vacina INT,
     id_usuario INT,
     dt_ultima DATE,
-    dt_proxima DATE
+    dt_proxima DATE,
+    dose INT,
+    foreign key (id_vacina) references vacina (id_vacina),
+    foreign key (id_usuario) references usuario (id_usuario)
 }

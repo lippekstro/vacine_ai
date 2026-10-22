@@ -3,7 +3,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 ?>
 
 <main>
-    <form>
+    <form action="/vacine_ai/controllers/add_vacina_controller.php" method="POST">
         <div class="caixa-formulario">
 
             <h1>💉 Cadastrar Vacina</h1>
@@ -11,14 +11,14 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                 Registre a aplicação e acompanhe a próxima dose.
             </p>
 
-            <form action="" method="POST">
+
 
                 <div class="grupo">
                     <label for="vacina">Qual a vacina?</label>
                     <select name="vacina" id="vacina" required>
                         <option value="">Selecione uma vacina</option>
-                        <option value="1">BCG</option>
-                        <option value="2">Gripe</option>
+                        <option value="2">BCG</option>
+                        <option value="1">Gripe</option>
                         <option value="3">Febre Amarela</option>
                     </select>
                 </div>
@@ -58,8 +58,6 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                 <button type="submit" class="botao-cadastrar">
                     Cadastrar vacina
                 </button>
-
-            </form>
 
         </div>
     </form>
