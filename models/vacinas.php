@@ -1,5 +1,5 @@
 <?php
-
+require_once '.php'
 
 class Vacina
 {
@@ -23,14 +23,27 @@ class Vacina
     {
         $this->nome = $nome;
     }
+
     public function getId()
     {
         return $this->id_vacina;
     }
+
+    public function setId($id_vacina)
+    {
+        $this->id = $id_vacina;
+    }
+
     public function getQtd()
     {
         return $this->qtd_doses;
     }
+
+    public function setQtd($qtd_doses)
+    {
+        $this->doses = $qtd_doses;
+    }
+
     public function criar()
     {
         try {
@@ -86,13 +99,17 @@ class Vacina
     }
       public function carregar()
     {
-            $conexao = Conexao::conectar();
-            $sql = "DELETE FROM vacina WHERE id_vacina = :id";
-            $stmt = $conexao->prepare($sql);
-            $stmt->bindvalue(':id', $this->getId());
-            $stmt->execute();
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
+        try{
+        $conexao = Conexao::conectar();
+        $sql = "SELECT * FROM vacina WHERE id_vacina = :id";
+        $stmt = $conexao->prepare($sql);
+        $stmt->bindvalue(':id', $this->getId());
+        $stmt->execute();
+        $resultado = $stmt->fetch();
+        $this->setNome($resultado['nome']);
+        $this->setQtd($resultado['qtd_doses']);       
+    } catch (PDOException $e){
+        echo $e->getMessage();
     }
+}
 }
