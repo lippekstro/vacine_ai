@@ -25,10 +25,10 @@
 
         <nav class="menu">
             <a href="#" class="menu-link">Início</a>
-            <a href="#" class="menu-link">Recursos</a>
-            <a href="#" class="menu-link">Sobre</a>
-            <a href="#" class="menu-link">Dúvidas</a>
-            <a href="#" class="menu-link">Contato</a>
+            <a href="#" class="menu-link">Perfil</a>
+            <a href="#" class="menu-link">Cadastrar Vacina</a>
+            <a href="#" class="menu-link">sair</a>
+        <!--   <a href="#" class="menu-link">Contato</a> -->
         </nav>
 
         <div class="botoes-topo">
