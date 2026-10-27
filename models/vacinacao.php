@@ -1,5 +1,5 @@
 <?php 
-require_once __DIR__ . "/../configs/conexao_v.php";
+require_once __DIR__ . "/../configs/conexao.php";
 
 class Vacinacao {
     private $id_vacinacao;
