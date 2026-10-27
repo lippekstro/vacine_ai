@@ -1,22 +1,6 @@
 <?php
-require '../dados.php';
-
-$tomadas   = array_filter($vacinas, fn($v) => $v['status'] === 'tomada');
-$faltantes = array_filter($vacinas, fn($v) => $v['status'] === 'faltante');
-
-function dataBr($data) {
-    return $data ? date('d/m/Y', strtotime($data)) : '—';
-}
+require_once __DIR__ . "/../templates/_cabecalho.php";
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Perfil - Minhas Vacinas</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-</head>
-<body class="bg-light">
 
 <div class="container py-5">
   <div class="col-lg-11 mx-auto">
@@ -41,7 +25,7 @@ function dataBr($data) {
             <h5 class="text-success mb-1">
               <i class="bi bi-check-circle-fill"></i> Tomadas
             </h5>
-            <h2 class="mb-0"><?= count($tomadas) ?></h2>
+            <h2 class="mb-0">4</h2>
           </div>
         </div>
       </div>
@@ -51,7 +35,7 @@ function dataBr($data) {
             <h5 class="text-warning mb-1">
               <i class="bi bi-exclamation-triangle-fill"></i> Faltam Tomar
             </h5>
-            <h2 class="mb-0"><?= count($faltantes) ?></h2>
+            <h2 class="mb-0">5</h2>
           </div>
         </div>
       </div>
@@ -60,7 +44,7 @@ function dataBr($data) {
     <div class="mb-5">
       <h4 class="mb-3 text-success">
         <i class="bi bi-shield-check"></i> Vacinas Tomadas
-        <span class="badge bg-success"><?= count($tomadas) ?></span>
+        <span class="badge bg-success">6</span>
       </h4>
 
       <?php if (empty($tomadas)): ?>
@@ -80,7 +64,7 @@ function dataBr($data) {
                   <h5 class="card-title mb-2"><?= htmlspecialchars($v['nome']) ?></h5>
                   <p class="card-text text-muted mb-0">
                     <i class="bi bi-calendar-check"></i>
-                    Aplicada em <?= dataBr($v['data']) ?>
+                    Aplicada em 10/10/2026
                   </p>
                 </div>
               </div>
@@ -93,7 +77,7 @@ function dataBr($data) {
     <div class="mb-5">
       <h4 class="mb-3 text-warning">
         <i class="bi bi-clock-history"></i> Vacinas Faltantes
-        <span class="badge bg-warning text-dark"><?= count($faltantes) ?></span>
+        <span class="badge bg-warning text-dark">5</span>
       </h4>
 
       <?php if (empty($faltantes)): ?>
@@ -125,5 +109,6 @@ function dataBr($data) {
   </div>
 </div>
 
-</body>
-</html>
+<?php
+require_once __DIR__ . "/../templates/_rodape.php";
+?>

@@ -1,5 +1,5 @@
 <?php
-require_once '.php'
+require_once '/../configs/conexao.php';
 
 class Vacina
 {
@@ -31,7 +31,7 @@ class Vacina
 
     public function setId($id_vacina)
     {
-        $this->id = $id_vacina;
+        $this->id_vacina = $id_vacina;
     }
 
     public function getQtd()
@@ -41,7 +41,7 @@ class Vacina
 
     public function setQtd($qtd_doses)
     {
-        $this->doses = $qtd_doses;
+        $this->qtd_doses = $qtd_doses;
     }
 
     public function criar()
@@ -90,7 +90,7 @@ class Vacina
             $stmt = $conexao->prepare($sql);
             $stmt->bindvalue(':nome', $this->getNome());
             $stmt->bindvalue(':qtd_doses', $this->getQtd());
-            $stmt->bindvalue(':id_vacina', $this->getId());
+            $stmt->bindvalue(':id', $this->getId());
 
             $stmt->execute();
         } catch (PDOException $e) {
