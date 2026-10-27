@@ -7,6 +7,7 @@
 
 body {
     width: 100%;
+    
 }
 
 /* -------------------------- INICIO HEADER -----------------------*/
@@ -108,6 +109,11 @@ header {
 
 .text-section {
     max-width: 450px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    /* Reduza um pouco o padding interno para os elementos caberem melhor na caixa menor */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .text-section h1 {
@@ -125,6 +131,7 @@ header {
     font-size: 1.1rem;
     color: #334e5e;
     line-height: 1.5;
+    text-align: justify;
 }
 
 .carousel-section {
@@ -213,3 +220,5 @@ footer img {
 }
 
 /*------------------------------ fim footer ------------------------*/
+
+/*---------------------------- RESPONSIVIDADE */
