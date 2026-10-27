@@ -4,9 +4,9 @@ require_once __DIR__ . "/templates/_cabecalho.php";
 
 
 
-<main>
-<!--uma pequena alteração-->
-<!--falta fazer:
+<main class="mt-0">
+
+    <!--falta fazer:
   1. link do java
   2. link dos icones caso formos usar google icone
   3. as bolinhas do banner
@@ -14,105 +14,82 @@ require_once __DIR__ . "/templates/_cabecalho.php";
 -->
 
 
-    <header>
-
-        <!-- ____________ TOPO ___________ -->
-        <div class="logo">
-            <img src="imagens/logo.png">
-            <h2>Vacine<span>Ai</span></h2>
-        </div>
-
-        <nav>
-            <a href="#">Início</a>
-            <a href="#">Recursos</a>
-            <a href="#">Sobre</a>
-            <a href="#">Dúvidas</a>
-            <a href="#">Contato</a>
-        </nav>
-
-        <div class="botoes-topo">
-            <button class="entrar">Entrar</button>
-            <button class="criar">Criar Conta</button>
-        </div>
-
-    </header>
+   
 
 
 
     <!--___________ primeira sessao________ -->
-    <section>
+<div class="hero-container">
+        <!-- Lado Esquerdo: Texto (Sem Botões) -->
+        <div class="text-section">
+            <h1>Cuidar da sua saúde<br>começa pela <span>prevenção.</span></h1>
+            <p>O VacineAi organiza sua carteira de vacinação, lembra você das próximas doses e protege o que mais importa: você e sua família.</p>
+        </div>
 
-        <!--_____________ coluna 1 ____________ -->
-        <div class="info_1">
-            <h1>
-                Cuidar da sua saúde começa pela
-                <span>prevenção.</span>
-            </h1>
-
-            <p>
-                O VacineAi organiza sua carteira de vacinação,
-                lembra das próximas doses e protege você e sua família.
-            </p>
-
-
-            <!-- ______________ coluna 2 (CENTRO) _________________-->
-            <div class="img_central">
-                <img src="colocar_ainda.png">
-                <!-- icone 1 (calendario)  -->
-                <img src="colocar_ainda.png">
-                <!-- icone 2 (sino)-->
-                <img src="colocar_ainda.png">
-                <!-- icone 3 (familia)-->
-                <img src="colocar_ainda.png">
-                <!-- icone 4 (escudo de segurança) -->
-                <img src="colocar_ainda.png">
-
-                <!-- txt 1 -->
-                <h5> Organize sua carteira</h5>
-                <!-- txt 2 -->
-                <h5> Receba lembretes</h5>
-                <!-- txt 3-->
-                <h5> Para toda a família </h5>
-                <!-- txt 4 -->
-                <h5> sSegurança e privacidade </h5>
-
+        <!-- Lado Direito: Estrutura do Carrossel -->
+        <div class="carousel-section">
+            
+            <!-- Card 1: Próximas Doses -->
+            <div class="carousel-card">
+                <div class="carousel-header">
+                    <h3>Próximas doses</h3>
+                    <a href="#">Ver todas</a>
+                </div>
+                <!-- Estrutura dos itens do carrossel/lista -->
+                <div class="card-dose-item">
+                    <!-- Espaço para ícone -->
+                    <div>
+                        <h4>Hepatite B - 3ª dose</h4>
+                        <small>10/09/2026</small>
+                    </div>
+                </div>
+                <div class="card-dose-item">
+                    <!-- Espaço para ícone -->
+                    <div>
+                        <h4>Febre Amarela - Reforço</h4>
+                        <small>20/10/2026</small>
+                    </div>
+                </div>
             </div>
 
-
-            <!-- ______________ coluna 3 ___________ -->
-            <div class="card-vacinas">
-
-                <h3>Próximas doses</h3>
-
-                <div class="vacina">
-                    <p>Hepatite B</p>
-                    <span>7 dias</span>
+            <!-- Card 2: Banner Secundário do Carrossel -->
+            <div class="carousel-card banner-card">
+                <!-- Espaço para imagem do celular -->
+                <div>
+                    <h3 style="color: #0c2b3e; margin-bottom: 5px;">Nunca mais esqueça uma dose!</h3>
+                    <p style="font-size: 0.8rem; color: #334e5e;">Ative seus lembretes e fique sempre protegido.</p>
                 </div>
-
-                <div class="vacina">
-                    <p>Febre Amarela</p>
-                    <span>37 dias</span>
-                </div>
-
-                <div class="vacina">
-                    <p>HPV</p>
-                    <span>63 dias</span>
-                </div>
-
             </div>
 
-    </section>
+        </div>
+    </div>
 
-    <!-- sessao 2  -->
-    <section class="img_banner">
-        <!-- imagem 1 -->
-        <img src="colocar_ainda.png">
-        <!-- imagem 2 -->
-        <img src="colocar_ainda.png">
-        <!-- imagem 3-->
-        <img src="colocar_ainda.png">
+    <!-- ---------------------------------SESSAO DO CARROSSEL ------------------------------------ -->
+    <section class="container">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/vacine_ai/imgs/banner-1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/vacine_ai/imgs/banner-2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/vacine_ai/imgs/banner-3.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
-        <!-- ta faltando as bolinhas de transicao que fica em baixo do banner.. to em duvida se é um forms.. depois eu coloco-->
     </section>
 </main>
 
