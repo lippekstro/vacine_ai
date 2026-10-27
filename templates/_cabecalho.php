@@ -35,7 +35,7 @@
 
         <div class="botoes-topo">
             <a href="/vacine_ai/views/login.php" class="botoes">Login</a>
-            <a href="#" class="botoes">Criar Conta</a>
+            <a href="/vacine_ai/views/cadastro_usuario.php" class="botoes">Criar Conta</a>
 
         </div>
 
