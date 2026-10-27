@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel="stylesheet" href="/vacine_ai/css/bootstrap.css">
-    <script src="/vacine_ai/js/bootstrap.js" defer></script>
-
     <link rel="stylesheet" href="/vacine_ai/css/style.css">
+
+
+    <script src="/vacine_ai/js/bootstrap.js" defer></script>
     
 </head>
 
@@ -33,7 +34,7 @@
         </nav>
 
         <div class="botoes-topo">
-            <a href="#" class="botoes">Login</a>
+            <a href="/vacine_ai/views/login.php" class="botoes">Login</a>
             <a href="#" class="botoes">Criar Conta</a>
 
         </div>
