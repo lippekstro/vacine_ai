@@ -25,10 +25,10 @@
         </div>
 
         <nav class="menu">
-            <a href="#" class="menu-link">Início</a>
+            <a href="/vacine_ai/index.php" class="menu-link">Início</a>
             <a href="#" class="menu-link">Perfil</a>
-            <a href="#" class="menu-link">Cadastrar Vacina</a>
-            <a href="#" class="menu-link">sair</a>
+            <a href="/vacine_ai/views/cadastrar_vacina.php" class="menu-link">Cadastrar Vacina</a>
+            <a href="#" class="menu-link">Sair</a>
         <!--   <a href="#" class="menu-link">Contato</a> -->
         </nav>
 

@@ -3,13 +3,14 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 ?>
 
 <main>
-    <form action="/vacine_ai/controllers/add_vacina_controller.php" method="POST">
-        <div class="caixa-formulario">
+    <div class="centraliza">
+        <form action="/vacine_ai/controllers/add_vacina_controller.php" method="POST">
+            <div class="caixa-formulario">
 
-            <h1>💉 Cadastrar Vacina</h1>
-            <p class="subtitulo">
-                Registre a aplicação e acompanhe a próxima dose.
-            </p>
+                <h1>💉 Cadastrar Vacina</h1>
+                <p class="subtitulo">
+                    Registre a aplicação e acompanhe a próxima dose.
+                </p>
 
 
 
@@ -59,8 +60,10 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                     Cadastrar vacina
                 </button>
 
-        </div>
-    </form>
+            </div>
+        </form>
+    </div>
+
 
 </main>
 
