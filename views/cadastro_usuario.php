@@ -2,9 +2,9 @@
 require_once __DIR__ . "/../templates/_cabecalho.php";
 ?>
 
-<main>
+<main class="container">
 
-    <div class="container m-5">
+    <div class="m-5">
         <div class="row justify-content-center align-items-center min-vh-100">
             <div class="col-12 col-md-8 col-lg-6">
 
