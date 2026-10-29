@@ -174,7 +174,7 @@ $dataNascimento = date(
                     <div class="d-grid">
 
                         <a
-                            href="/vacine_ai/views/minhas_vacinas.php"
+                            href="/vacine_ai/views/exibir_vacinas.php"
                             class="btn btn-outline-success btn-lg">
                             <i class="bi bi-clipboard2-pulse me-2"></i>
                             Gerenciar minhas vacinas
@@ -212,7 +212,7 @@ $dataNascimento = date(
                         <div class="d-grid">
 
                             <a
-                                href="/vacine_ai/views/gerenciar_vacinas.php"
+                                href="/vacine_ai/views/gerenciar_vacinas_site.php"
                                 class="btn btn-outline-warning btn-lg">
                                 <i class="bi bi-gear me-2"></i>
                                 Gerenciar vacinas do site
