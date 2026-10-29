@@ -21,6 +21,7 @@ CREATE TABLE vacina (
     id_vacina INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(150) NOT NULL,
     qtd_doses INT NOT NULL,
+    periodo INT,
     CONSTRAINT chk_vacina_qtd_doses CHECK (qtd_doses > 0)
 );
 

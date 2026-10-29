@@ -17,6 +17,11 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                 </div>
 
                 <div class="grupo">
+                    <label for="periodo">Periodo entre Doses</label>
+                    <input type="number" name="periodo" id="periodo">
+                </div>
+
+                <div class="grupo">
                     <button type="submit" class="botao-cadastrar">Cadastrar</button>
                 </div>
             </div>
