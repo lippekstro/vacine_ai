@@ -3,6 +3,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 require_once __DIR__ . "/../models/vacinas.php";
 
 $vacinas = Vacina::listar();
+
 ?>
 
 <main>
@@ -48,6 +49,7 @@ $vacinas = Vacina::listar();
                         type="date"
                         name="data_aplicacao"
                         id="data_aplicacao"
+                        max="<?= date('Y-m-d') ?>"
                         required>
                 </div>
 

@@ -133,7 +133,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
                         <p class="text-center mt-4 mb-0">
                             Já possui uma conta?
-                            <a href="#" class="text-decoration-none">
+                            <a href="/vacine_ai/views/login.php" class="text-decoration-none">
                                 Entrar
                             </a>
                         </p>

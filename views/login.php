@@ -203,7 +203,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
                 <span>Não tem uma conta?</span>
 
-                <a href="#">Criar conta</a>
+                <a href="/vacine_ai/views/cadastro_usuario.php">Criar conta</a>
 
             </div>
 
