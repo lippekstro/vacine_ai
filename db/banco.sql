@@ -39,19 +39,19 @@ CREATE TABLE vacinacao (
 );
 
 -- seeds
-INSERT INTO vacina (nome, qtd_doses) VALUES
-('BCG', 1),
-('Hepatite B', 3),
-('Pentavalente', 3),
-('Poliomielite', 4),
-('Rotavírus', 2),
-('Pneumocócica 10-valente', 2),
-('Meningocócica C', 2),
-('Febre Amarela', 1),
-('Tríplice Viral', 2),
-('DTP', 3),
-('Hepatite A', 1),
-('HPV', 1),
-('Influenza', 1),
-('COVID-19', 2),
-('Varicela', 2);
+INSERT INTO vacina (nome, qtd_doses, periodo) VALUES
+('BCG', 1, 0),
+('Hepatite B', 3, 30),
+('Pentavalente', 3, 60),
+('Poliomielite', 4, 60),
+('Rotavírus', 2, 60),
+('Pneumocócica 10-valente', 2, 60),
+('Meningocócica C', 2, 60),
+('Febre Amarela', 1, 0),
+('Tríplice Viral', 2, 30),
+('DTP', 3, 60),
+('Hepatite A', 1, 0),
+('HPV', 1, 0),
+('Influenza', 1, 0),
+('COVID-19', 2, 30),
+('Varicela', 2, 90);

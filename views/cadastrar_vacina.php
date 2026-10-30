@@ -22,7 +22,12 @@ $vacinas = Vacina::listar();
                     <select name="vacina" id="vacina" required>
                         <option value="">Selecione uma vacina</option>
                         <?php foreach ($vacinas as $vac): ?>
-                            <option value="<?= $vac['id_vacina'] ?>" data-doses="<?= (int) $vac['qtd_doses'] ?>"><?= $vac['nome'] ?></option>
+                            <option
+                                value="<?= $vac['id_vacina'] ?>"
+                                data-doses="<?= (int) $vac['qtd_doses'] ?>"
+                                data-periodo="<?= (int) $vac['periodo'] ?>">
+                                <?= $vac['nome'] ?>
+                            </option>
                         <?php endforeach; ?>
                     </select>
                 </div>
@@ -31,9 +36,6 @@ $vacinas = Vacina::listar();
                     <label for="dose">Qual dose?</label>
                     <select name="dose" id="dose" required disabled>
                         <option value="">Selecione uma dose</option>
-                        <option value="1">1º dose</option>
-                        <option value="2">2º dose</option>
-                        <option value="3">3º dose</option>
                     </select>
                 </div>
 
@@ -41,6 +43,7 @@ $vacinas = Vacina::listar();
                     <label for="data_aplicacao">
                         Data da aplicação
                     </label>
+
                     <input
                         type="date"
                         name="data_aplicacao"
@@ -52,10 +55,12 @@ $vacinas = Vacina::listar();
                     <label for="proxima_vacinacao">
                         Data da próxima vacinação
                     </label>
+
                     <input
                         type="date"
                         name="proxima_vacinacao"
-                        id="proxima_vacinacao">
+                        id="proxima_vacinacao"
+                        disabled>
                 </div>
 
                 <button type="submit" class="botao-cadastrar">
@@ -71,10 +76,18 @@ $vacinas = Vacina::listar();
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+
         const selectVacina = document.getElementById('vacina');
         const selectDose = document.getElementById('dose');
 
+        const dataAplicacao = document.getElementById('data_aplicacao');
+        const proximaVacinacao = document.getElementById('proxima_vacinacao');
+
+        let periodo = 0;
+
+        // Seleção da vacina
         selectVacina.addEventListener('change', function() {
+
             const opcaoSelecionada = selectVacina.options[
                 selectVacina.selectedIndex
             ];
@@ -84,13 +97,23 @@ $vacinas = Vacina::listar();
                 10
             );
 
+            periodo = parseInt(
+                opcaoSelecionada.dataset.periodo,
+                10
+            );
+
             // Limpa as opções anteriores
             selectDose.innerHTML = '';
 
-            // Se nenhuma vacina estiver selecionada
+            // Limpa as datas
+            dataAplicacao.value = '';
+            proximaVacinacao.value = '';
+            proximaVacinacao.disabled = true;
+
+            // Verifica se uma vacina foi selecionada
             if (!selectVacina.value || isNaN(quantidadeDoses)) {
+
                 selectDose.disabled = true;
-                selectDose.required = true;
 
                 selectDose.add(new Option(
                     'Selecione primeiro uma vacina',
@@ -100,17 +123,69 @@ $vacinas = Vacina::listar();
                 return;
             }
 
-            // Adiciona a opção inicial
+            // Adiciona opção inicial
             selectDose.add(new Option('Selecione uma dose', ''));
 
-            // Cria as doses conforme a quantidade da vacina
-            for (let i = 1; i <= quantidadeDoses; i++) {
-                selectDose.add(new Option(`${i}ª dose`, i));
+            // Se tiver apenas uma dose
+            if (quantidadeDoses === 1) {
+
+                selectDose.add(new Option('Dose Única', 1));
+
+            } else {
+
+                // Cria as doses dinamicamente
+                for (let i = 1; i <= quantidadeDoses; i++) {
+
+                    selectDose.add(new Option(`${i}ª dose`, i));
+
+                }
+
             }
 
-            // Libera o select
+            // Libera o campo
             selectDose.disabled = false;
         });
+
+
+        // Seleção da data da aplicação
+        dataAplicacao.addEventListener('change', function() {
+
+            const dataSelecionada = dataAplicacao.value;
+
+            if (!dataSelecionada) {
+
+                proximaVacinacao.value = '';
+                proximaVacinacao.disabled = true;
+
+                return;
+            }
+
+            // Se não houver período, não existe sugestão
+            if (isNaN(periodo) || periodo <= 0) {
+
+                proximaVacinacao.value = '';
+                proximaVacinacao.disabled = true;
+
+                return;
+            }
+
+            const data = new Date(dataSelecionada + 'T12:00:00');
+
+            // Soma o período em dias
+            data.setDate(data.getDate() + periodo);
+
+            const ano = data.getFullYear();
+            const mes = String(data.getMonth() + 1).padStart(2, '0');
+            const dia = String(data.getDate()).padStart(2, '0');
+
+            const dataCalculada = `${ano}-${mes}-${dia}`;
+
+            // Libera o campo e sugere a data
+            proximaVacinacao.disabled = false;
+            proximaVacinacao.value = dataCalculada;
+
+        });
+
     });
 </script>
 
