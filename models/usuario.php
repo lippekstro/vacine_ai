@@ -22,7 +22,7 @@ class Usuario {
 
     public function criar() {
         $sql = "INSERT INTO usuario (email, senha, dt_nascimento, genero, cpf, telefone, foto, nome) VALUES (:email, :senha, :dt_nascimento, :genero, :cpf, :telefone, :foto, :nome)";
-        $conn = Conexao::conectar;
+        $conn = Conexao::conectar();
         $stmt = $conn->prepare($sql);
         $stmt->bindValue(":email", $this->getEmail());
         $stmt->bindValue(":senha", $this->getSenha());

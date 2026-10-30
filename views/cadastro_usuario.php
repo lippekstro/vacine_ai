@@ -21,6 +21,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                 <input
                                     type="text"
                                     class="form-control"
+                                    name="nome"
                                     id="nome"
                                     placeholder="Digite seu nome"
                                     autofocus
@@ -34,6 +35,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                 <input
                                     type="email"
                                     class="form-control"
+                                    name="email"
                                     id="email"
                                     placeholder="nome@exemplo.com"
                                     required>
@@ -46,6 +48,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                 <input
                                     type="date"
                                     class="form-control"
+                                    name="nascimento"
                                     id="dataNascimento"
                                     placeholder="Digite sua data de nascimento"
                                     required>
@@ -58,6 +61,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                 <input
                                     type="text"
                                     class="form-control"
+                                    name="cpf"
                                     id="cpf"
                                     placeholder="123.456.789-00"
                                     required>
@@ -70,6 +74,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                 <input
                                     type="text"
                                     class="form-control"
+                                    name="genero"
                                     id="genero"
                                     placeholder=""
                                     required>
@@ -82,6 +87,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                 <input
                                     type="tel"
                                     class="form-control"
+                                    name="telefone"
                                     id="telefone"
                                     placeholder="(00) 00000-0000"
                                     required>
@@ -94,6 +100,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                 <input
                                     type="file"
                                     class="form-control"
+                                    name="foto"
                                     id="foto"
                                     placeholder="Selecione uma imagem"
                                     required>
@@ -107,6 +114,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                 <input
                                     type="password"
                                     class="form-control"
+                                    name="senha"
                                     id="senha"
                                     placeholder="Digite sua senha"
                                     required>
@@ -119,6 +127,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                 <input
                                     type="password"
                                     class="form-control"
+                                    name="confirmarSenha"
                                     id="confirmarSenha"
                                     placeholder="Confirme sua senha"
                                     required>
