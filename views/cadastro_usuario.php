@@ -27,7 +27,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
                         <h2 class="text-center mb-4">Criar conta</h2>
 
-                        <form>
+                        <form action = "/vacine_ai/controllers/usuario_add_controller.php" method = "POST" enctype = "multipart/form-data">
                             <div class="mb-3">
                                 <label for="nome" class="form-label">
                                     Nome completo
@@ -157,7 +157,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
                         <p class="text-center mt-4 mb-0">
                             Já possui uma conta?
-                            <a href="#" class="text-decoration-none">
+                            <a href="/vacine_ai/views/login.php" class="text-decoration-none">
                                 Entrar
                             </a>
                         </p>
