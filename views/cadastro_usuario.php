@@ -133,7 +133,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                     required>
                             </div>
 
-                            <button
+                            <button class = "btn-enter"
                                 type="submit"
                                 class="btn btn-primary w-100">
                                 Cadastrar

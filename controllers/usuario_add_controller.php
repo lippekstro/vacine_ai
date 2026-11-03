@@ -12,8 +12,16 @@ $cpf = filter_var($_POST['cpf'], FILTER_SANITIZE_SPECIAL_CHARS);
 $telefone = filter_var($_POST['telefone'], FILTER_SANITIZE_SPECIAL_CHARS);
 $genero = filter_var($_POST['genero'], FILTER_SANITIZE_SPECIAL_CHARS);
 $nascimento = filter_var($_POST['nascimento']);
-$foto = null;
+if(!empty($_FILES['foto']['name'])) {
+    $foto = $_FILES['foto'];
+    $extensao = strtolower(pathinfo($foto['name'], PATHINFO_EXTENSION));
+    $nomedafoto = uniqid() . '.' . $extensao;
 
+    $caminho = __DIR__ . "/../imgs/fotos" . $nomedafoto;
+    move_uploaded_file($foto['tmp_name'], $caminho);
+} else {
+    $nomedafoto = null;
+}
 
 $novoUsuario = new Usuario();
 $novoUsuario->setNome($nome);
