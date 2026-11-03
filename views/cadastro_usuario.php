@@ -50,6 +50,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                     class="form-control"
                                     name="nascimento"
                                     id="dataNascimento"
+                                    max="<?= date('Y-m-d') ?>"
                                     placeholder="Digite sua data de nascimento"
                                     required>
                             </div>
