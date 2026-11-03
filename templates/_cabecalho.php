@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . "/../auth/autenticacao.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vacine Ai</title>
-    
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel="stylesheet" href="/vacine_ai/css/bootstrap.css">
@@ -13,7 +17,7 @@
 
 
     <script src="/vacine_ai/js/bootstrap.js" defer></script>
-    
+
 </head>
 
 <body>
@@ -27,16 +31,17 @@
 
         <nav class="menu">
             <a href="/vacine_ai/index.php" class="menu-link">Início</a>
-            <a href="/vacine_ai/views/perfil.php" class="menu-link">Perfil</a>
-            <a href="/vacine_ai/views/cadastrar_vacina.php" class="menu-link">Cadastrar Vacina</a>
-            <a href="#" class="menu-link">Sair</a>
-        <!--   <a href="#" class="menu-link">Contato</a> -->
+            <?php if (Autenticacao::isLogado()): ?>
+                <a href="/vacine_ai/views/perfil.php" class="menu-link">Perfil</a>
+                <a href="/vacine_ai/views/cadastrar_vacina.php" class="menu-link">Cadastrar Vacina</a>
+                <a href="/vacine_ai/controllers/logout_controller.php" class="menu-link">Sair</a>
+            <?php endif; ?>
         </nav>
 
-        <div class="botoes-topo">
-            <a href="/vacine_ai/views/login.php" class="botoes">Login</a>
-            <a href="/vacine_ai/views/cadastro_usuario.php" class="botoes">Criar Conta</a>
-
-        </div>
-
+        <?php if (!Autenticacao::isLogado()): ?>
+            <div class="botoes-topo">
+                <a href="/vacine_ai/views/login.php" class="botoes">Login</a>
+                <a href="/vacine_ai/views/cadastro_usuario.php" class="botoes">Criar Conta</a>
+            </div>
+        <?php endif; ?>
     </header>

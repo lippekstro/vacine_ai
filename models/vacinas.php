@@ -6,6 +6,7 @@ class Vacina
     private $id_vacina;
     private $nome;
     private $qtd_doses;
+    private $periodo;
 
     public function __construct($id = false)
     {
@@ -48,10 +49,11 @@ class Vacina
     {
         try {
             $conexao = Conexao::conectar();
-            $sql = "INSERT INTO vacina (nome, qtd_doses) VALUES (:nome, :qtd_doses)";
+            $sql = "INSERT INTO vacina (nome, qtd_doses, periodo) VALUES (:nome, :qtd_doses, :periodo)";
             $stmt = $conexao->prepare($sql);
             $stmt->bindvalue(':nome', $this->getNome());
             $stmt->bindvalue(':qtd_doses', $this->getQtd());
+            $stmt->bindvalue(':periodo', $this->getPeriodo());
             $stmt->execute();
         } catch (PDOException $e) {
             echo $e->getMessage();
@@ -86,10 +88,11 @@ class Vacina
     {
         try {
             $conexao = Conexao::conectar();
-            $sql = "UPDATE vacina SET nome = :nome, qtd_doses = :qtd_doses Where id_vacina = :id";
+            $sql = "UPDATE vacina SET nome = :nome, qtd_doses = :qtd_doses, periodo = :periodo Where id_vacina = :id";
             $stmt = $conexao->prepare($sql);
             $stmt->bindvalue(':nome', $this->getNome());
             $stmt->bindvalue(':qtd_doses', $this->getQtd());
+            $stmt->bindvalue(':periodo', $this->getPeriodo());
             $stmt->bindvalue(':id', $this->getId());
 
             $stmt->execute();
@@ -112,4 +115,15 @@ class Vacina
         echo $e->getMessage();
     }
 }
+
+
+    public function getPeriodo()
+    {
+        return $this->periodo;
+    }
+
+    public function setPeriodo($periodo): void
+    {
+        $this->periodo = $periodo;
+    }
 }
