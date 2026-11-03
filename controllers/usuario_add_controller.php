@@ -17,7 +17,7 @@ if(!empty($_FILES['foto']['name'])) {
     $extensao = strtolower(pathinfo($foto['name'], PATHINFO_EXTENSION));
     $nomedafoto = uniqid() . '.' . $extensao;
 
-    $caminho = __DIR__ . "/../imgs/fotos" . $nomedafoto;
+    $caminho = __DIR__ . "/../imgs/fotos/" . $nomedafoto;
     move_uploaded_file($foto['tmp_name'], $caminho);
 } else {
     $nomedafoto = null;
