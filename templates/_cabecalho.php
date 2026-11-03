@@ -27,10 +27,11 @@
 
         <nav class="menu">
             <a href="/vacine_ai/index.php" class="menu-link">Início</a>
+            <?php if(Autenticacao::isLogado()): ?>
             <a href="/vacine_ai/views/perfil.php" class="menu-link">Perfil</a>
             <a href="/vacine_ai/views/cadastrar_vacina.php" class="menu-link">Cadastrar Vacina</a>
-            <a href="#" class="menu-link">Sair</a>
-        <!--   <a href="#" class="menu-link">Contato</a> -->
+            <a href="/vacine_ai/controllers/logout_controller.php" class="menu-link">Sair</a>
+            <?php endif; ?>
         </nav>
 
         <div class="botoes-topo">
