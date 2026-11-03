@@ -13,7 +13,7 @@ class Autenticacao
         $stmt->execute();
         $resultado = $stmt->fetch();
 
-        if ($resultado && password_verify($resultado["senha"], $senha)) {
+        if ($resultado && password_verify($senha, $resultado["senha"])) {
             $_SESSION['id_usuario'] = $resultado['id_usuario'];
             $_SESSION['nome'] = $resultado['nome'];
             $_SESSION['nivel'] = $resultado['nivel_acesso'];
@@ -43,7 +43,8 @@ class Autenticacao
         }
     }
 
-    public static function logout() {
+    public static function logout()
+    {
         self::iniciarSessao();
         $_SESSION = [];
         session_destroy();

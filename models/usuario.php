@@ -1,7 +1,8 @@
-<?php 
+<?php
 require_once __DIR__ . "/../configs/conexao.php";
 
-class Usuario {
+class Usuario
+{
     private $id_usuario;
     private $email;
     private $senha;
@@ -13,14 +14,42 @@ class Usuario {
     private $nome;
     private $nivel_acesso;
 
-    public function __construct($id = false) {
+    public function __construct($id = false)
+    {
         if ($id) {
             $this->id_usuario = $id;
             $this->carregar();
         }
     }
 
-    public function criar() {
+    public function carregar()
+    {
+        try {
+            $conexao = Conexao::conectar();
+            $sql = "SELECT * FROM usuario WHERE id_usuario = :id";
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindValue(':id', $this->id_usuario);
+            $stmt->execute();
+            $resultado = $stmt->fetch();
+
+            if ($resultado) {
+                $this->email = $resultado['email'];
+                $this->senha = $resultado['senha'];
+                $this->dt_nascimento = $resultado['dt_nascimento'];
+                $this->genero = $resultado['genero'];
+                $this->cpf = $resultado['cpf'];
+                $this->telefone = $resultado['telefone'];
+                $this->foto = $resultado['foto'];
+                $this->nome = $resultado['nome'];
+                $this->nivel_acesso = $resultado['nivel_acesso'];
+            }
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    public function criar()
+    {
         $sql = "INSERT INTO usuario (email, senha, dt_nascimento, genero, cpf, telefone, foto, nome) VALUES (:email, :senha, :dt_nascimento, :genero, :cpf, :telefone, :foto, :nome)";
         $conn = Conexao::conectar();
         $stmt = $conn->prepare($sql);
@@ -35,79 +64,98 @@ class Usuario {
         $stmt->execute();
     }
 
-    public function getId() {
+    public function getId()
+    {
         return $this->id_usuario;
     }
 
-    public function getEmail() {
+    public function getEmail()
+    {
         return $this->email;
     }
 
-    public function setEmail($email) {
+    public function setEmail($email)
+    {
         $this->email = $email;
     }
 
-    public function getSenha() {
+    public function getSenha()
+    {
         return $this->senha;
     }
 
-    public function setSenha($senha) {
+    public function setSenha($senha)
+    {
         $this->senha = $senha;
     }
 
-    public function getNivel() {
+    public function getNivel()
+    {
         return $this->nivel_acesso;
     }
 
-    public function setNivel($nivel) {
+    public function setNivel($nivel)
+    {
         $this->nivel_acesso = $nivel;
     }
 
-    public function getNascimento() {
+    public function getNascimento()
+    {
         return $this->dt_nascimento;
     }
 
-    public function setNascimento($nascimento) {
+    public function setNascimento($nascimento)
+    {
         $this->dt_nascimento = $nascimento;
     }
 
-    public function getGenero() {
+    public function getGenero()
+    {
         return $this->genero;
     }
 
-    public function setGenero($genero) {
+    public function setGenero($genero)
+    {
         $this->genero = $genero;
     }
 
-    public function getCpf() {
+    public function getCpf()
+    {
         return $this->cpf;
     }
 
-    public function setCpf($cpf) {
+    public function setCpf($cpf)
+    {
         $this->cpf = $cpf;
     }
 
-    public function getTelefone() {
+    public function getTelefone()
+    {
         return $this->telefone;
     }
 
-    public function setTelefone($telefone) {
+    public function setTelefone($telefone)
+    {
         $this->telefone = $telefone;
     }
 
-    public function getFoto() {
+    public function getFoto()
+    {
         return $this->foto;
     }
 
-    public function setFoto($foto) {
+    public function setFoto($foto)
+    {
         $this->foto = $foto;
     }
 
-    public function getNome() {
+    public function getNome()
+    {
         return $this->nome;
     }
 
-    public function setNome($nome) {
+    public function setNome($nome)
+    {
         $this->nome = $nome;
     }
 }

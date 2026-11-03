@@ -84,7 +84,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
             </p>
 
             <form
-                action=""
+                action="/vacine_ai/controllers/login_controller.php"
                 method="post"
                 class="login-form">
 
@@ -105,7 +105,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                             type="text"
                             name="email"
                             id="email"
-                            placeholder="Digite seu e-mail ou CPF"
+                            placeholder="Digite seu e-mail"
                             autocomplete="username"
                             required>
 

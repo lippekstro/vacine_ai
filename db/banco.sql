@@ -31,6 +31,7 @@ CREATE TABLE vacinacao (
     id_usuario INT NOT NULL,
     dose INT NOT NULL,
     dt_aplicacao DATE NOT NULL,
+    dt_proxima DATE,
 
     CONSTRAINT chk_vacinacao_dose CHECK (dose > 0),
     CONSTRAINT fk_vacinacao_vacina FOREIGN KEY (id_vacina)REFERENCES vacina (id_vacina),
