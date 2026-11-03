@@ -40,6 +40,34 @@ class Vacinacao
         }
     }
 
+    public static function listarTomadasPorUsuario($id_usuario)
+    {
+        try {
+            $conexao = Conexao::conectar();
+            $sql = "SELECT vc.*, u.nome, v.nome as nome_vacina, v.qtd_doses FROM vacinacao vc JOIN usuario u ON vc.id_usuario = u.id_usuario JOIN vacina v ON v.id_vacina = vc.id_vacina WHERE dt_aplicacao <= CURDATE() AND vc.id_usuario = :id_usuario";
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindValue(':id_usuario', $id_usuario);
+            $stmt->execute();
+            return $stmt->fetchALL();
+        } catch (PDOException $e) {
+            echo 'Erro ao buscar vacina: ' . $e->getMessage();
+        }
+    }
+
+    public static function listarFaltantesPorUsuario($id_usuario)
+    {
+        try {
+            $conexao = Conexao::conectar();
+            $sql = "SELECT vc.*, u.nome, v.nome as nome_vacina, v.qtd_doses FROM vacinacao vc JOIN usuario u ON vc.id_usuario = u.id_usuario JOIN vacina v ON v.id_vacina = vc.id_vacina WHERE dt_proxima > CURDATE() AND vc.id_usuario = :id_usuario";
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindValue(':id_usuario', $id_usuario);
+            $stmt->execute();
+            return $stmt->fetchALL();
+        } catch (PDOException $e) {
+            echo 'Erro ao buscar vacina: ' . $e->getMessage();
+        }
+    }
+
     public function getId_vacinacao()
     {
         return $this->id_vacinacao;
