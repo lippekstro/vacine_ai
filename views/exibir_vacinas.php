@@ -2,6 +2,12 @@
 require_once __DIR__ . "/../templates/_cabecalho.php";
 require_once __DIR__ . "/../models/usuario.php";
 require_once __DIR__ . "/../models/vacinacao.php";
+
+if (!Autenticacao::isLogado()) {
+    header('Location: /vacine_ai/views/login.php');
+    exit();
+}
+
 $usuario = new Usuario ($_SESSION['id_usuario']);
 $tomadas = Vacinacao::listarTomadasPorUsuario($_SESSION['id_usuario']);
 $faltantes = Vacinacao::listarFaltantesPorUsuario($_SESSION['id_usuario']);

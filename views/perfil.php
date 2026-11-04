@@ -1,7 +1,11 @@
 <?php
 require_once __DIR__ . "/../templates/_cabecalho.php";
 require_once __DIR__ . "/../models/usuario.php";
-require_once __DIR__ . "/../auth/autenticacao.php";
+
+if (!Autenticacao::isLogado()) {
+    header('Location: /vacine_ai/views/login.php');
+    exit();
+}
 
 $usuario = new Usuario($_SESSION['id_usuario']);
 ?>
