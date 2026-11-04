@@ -324,5 +324,12 @@ footer img {
 
 
 
-
+.criar-conta {
+    font-weight: 800;
+    justify-content: center;
+    text-align: center;
+    color: #173d4d;
+    font-size: 28px;
+    margin: 0 0 20px;
+}
 

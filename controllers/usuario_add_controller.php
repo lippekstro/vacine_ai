@@ -15,12 +15,12 @@ $nascimento = filter_var($_POST['nascimento']);
 if(!empty($_FILES['foto']['name'])) {
     $foto = $_FILES['foto'];
     $extensao = strtolower(pathinfo($foto['name'], PATHINFO_EXTENSION));
-    $nomedafoto = uniqid() . '.' . $extensao;
+    $nomefoto = uniqid() . '.' . $extensao;
 
-    $caminho = __DIR__ . "/../imgs/fotos/" . $nomedafoto;
+    $caminho = __DIR__ . "/../imgs/fotos/" . $nomefoto;
     move_uploaded_file($foto['tmp_name'], $caminho);
 } else {
-    $nomedafoto = null;
+    $nomefoto = null;
 }
 
 $novoUsuario = new Usuario();
@@ -30,9 +30,11 @@ $novoUsuario->setCpf($cpf);
 $novoUsuario->setTelefone($telefone);
 $novoUsuario->setGenero($genero);
 $novoUsuario->setNascimento($nascimento);
-$novoUsuario->setFoto($foto);
+$novoUsuario->setFoto($nomefoto);
 $novoUsuario->setSenha($senha);
 $novoUsuario->criar();
 
 header("Location: /vacine_ai/views/login.php");
+
 exit();
+
