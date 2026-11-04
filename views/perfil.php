@@ -1,23 +1,13 @@
 <?php
 require_once __DIR__ . "/../templates/_cabecalho.php";
+require_once __DIR__ . "/../models/usuario.php";
 
-// Dados fictícios para demonstração do front-end.
-$usuario = [
-    "nome" => "Maria Oliveira Santos",
-    "data_nascimento" => "1998-08-15",
-    "genero" => "Feminino",
-    "email" => "maria.oliveira@email.com",
-    "telefone" => "(98) 99999-9999",
-    "cpf" => "123.456.789-00",
-    "foto" => "https://picsum.photos/200",
-    "administrador" => true
-];
+if (!Autenticacao::isLogado()) {
+    header('Location: /vacine_ai/views/login.php');
+    exit();
+}
 
-// Formata a data para exibição.
-$dataNascimento = date(
-    "d/m/Y",
-    strtotime($usuario["data_nascimento"])
-);
+$usuario = new Usuario($_SESSION['id_usuario']);
 ?>
 
 <main class="container py-5">
@@ -26,7 +16,7 @@ $dataNascimento = date(
     <section class="text-center mb-4">
 
         <img
-            src="<?= htmlspecialchars($usuario['foto']) ?>"
+            src="<?= htmlspecialchars($usuario->getFoto()) ?>"
             alt="Foto de perfil"
             class="rounded-circle img-thumbnail mb-3"
             width="150"
@@ -68,7 +58,7 @@ $dataNascimento = date(
                             <input
                                 type="text"
                                 class="form-control"
-                                value="<?= htmlspecialchars($usuario['nome']) ?>"
+                                value="<?= htmlspecialchars($usuario->getNome()) ?>"
                                 readonly>
                         </div>
 
@@ -81,7 +71,7 @@ $dataNascimento = date(
                             <input
                                 type="text"
                                 class="form-control"
-                                value="<?= htmlspecialchars($dataNascimento) ?>"
+                                value="<?= htmlspecialchars(date("d/m/Y", strtotime($usuario->getNascimento()))) ?>"
                                 readonly>
                         </div>
 
@@ -94,7 +84,7 @@ $dataNascimento = date(
                             <input
                                 type="text"
                                 class="form-control"
-                                value="<?= htmlspecialchars($usuario['genero']) ?>"
+                                value="<?= htmlspecialchars($usuario->getGenero()) ?>"
                                 readonly>
                         </div>
 
@@ -107,7 +97,7 @@ $dataNascimento = date(
                             <input
                                 type="email"
                                 class="form-control"
-                                value="<?= htmlspecialchars($usuario['email']) ?>"
+                                value="<?= htmlspecialchars($usuario->getEmail()) ?>"
                                 readonly>
                         </div>
 
@@ -120,7 +110,7 @@ $dataNascimento = date(
                             <input
                                 type="text"
                                 class="form-control"
-                                value="<?= htmlspecialchars($usuario['telefone']) ?>"
+                                value="<?= htmlspecialchars($usuario->getTelefone()) ?>"
                                 readonly>
                         </div>
 
@@ -133,7 +123,7 @@ $dataNascimento = date(
                             <input
                                 type="text"
                                 class="form-control"
-                                value="<?= htmlspecialchars($usuario['cpf']) ?>"
+                                value="<?= htmlspecialchars($usuario->getCpf()) ?>"
                                 readonly>
                         </div>
 
@@ -188,7 +178,7 @@ $dataNascimento = date(
             </section>
 
             <!-- Gerenciamento administrativo -->
-            <?php if ($usuario['administrador']): ?>
+            <?php if (Autenticacao::isAdmin()): ?>
 
                 <section class="card shadow-sm border-0 mb-4">
 

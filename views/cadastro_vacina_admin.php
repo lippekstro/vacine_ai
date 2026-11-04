@@ -1,5 +1,10 @@
 <?php
 require_once __DIR__ . "/../templates/_cabecalho.php";
+
+if (!Autenticacao::isLogado()) {
+    header('Location: /vacine_ai/views/login.php');
+    exit();
+}
 ?>
 
 <main class="container">
@@ -14,6 +19,11 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                 <div class="grupo">
                     <label for="qtd_doses">Quantidade de Doses</label>
                     <input type="number" name="qtd_doses" id="qtd_doses">
+                </div>
+
+                <div class="grupo">
+                    <label for="periodo">Periodo entre Doses</label>
+                    <input type="number" name="periodo" id="periodo">
                 </div>
 
                 <div class="grupo">
