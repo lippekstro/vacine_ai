@@ -2,6 +2,10 @@
 
 <?php
 require_once __DIR__ . "/templates/_cabecalho.php";
+
+if(Autenticacao::isLogado()){
+$resutado = Vacinacao::listarFaltantesPorUsuario($_SESSION['id_usuario']);}
+
 ?>
 
 <main class="mt-0">
@@ -51,6 +55,7 @@ require_once __DIR__ . "/templates/_cabecalho.php";
 
             
             <table class="tabela-doses">
+                
                 <tr>
                     <td rowspan="2" class="icone">💉</td>
 
