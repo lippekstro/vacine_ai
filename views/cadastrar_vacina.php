@@ -2,6 +2,11 @@
 require_once __DIR__ . "/../templates/_cabecalho.php";
 require_once __DIR__ . "/../models/vacinas.php";
 
+if (!Autenticacao::isLogado()) {
+    header('Location: /vacine_ai/views/login.php');
+    exit();
+}
+
 $vacinas = Vacina::listar();
 
 ?>
