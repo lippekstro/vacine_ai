@@ -68,17 +68,20 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                     required>
                             </div>
 
-                            <div class="mb-3">
-                                <label for="genero" class="form-label">
-                                    Gênero
-                                </label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    name="genero"
-                                    id="genero"
-                                    placeholder=""
-                                    required>
+                           <div class="mb-3">
+                                <label for="genero" class="form-label">Gênero</label>
+                                <select class="form-select"
+                                        name="genero"
+                                        id="genero"
+                                        required>
+                                    <option value="">Selecione</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Feminino">Feminino</option>
+                                    <option value="Outro">Outro</option>
+                                    <option value="Prefiro não informar">
+                                        Prefiro não informar
+                                    </option>
+                                </select>
                             </div>
 
                             <div class="mb-3">
