@@ -103,6 +103,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                     class="form-control"
                                     name="foto"
                                     id="foto"
+                                    accept="image/*"
                                     placeholder="Selecione uma imagem"
                                     required>
                             </div>
