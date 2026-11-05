@@ -6,7 +6,7 @@ if (Autenticacao::isLogado()) {
     $resutado = Vacinacao::listarFaltantesPorUsuario($_SESSION['id_usuario']);
 }
 
-var_dump(!empty($resutado));
+
 
 ?>
 

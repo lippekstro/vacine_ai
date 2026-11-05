@@ -50,8 +50,14 @@ require_once __DIR__ . "/../auth/autenticacao.php";
           <span class="ticker-separator">✦</span>
           <span class="ticker-item">💉 Mantenha sua dose de Hepatite B atualizada</span>
           <span class="ticker-separator">✦</span>
+        <span class="ticker-item">🌍 Cada pessoa vacinada contribui para uma comunidade mais protegida!</span>
+         <span class="ticker-separator">✦</span>
           <span class="ticker-item">🗓️ Baixe o app e receba os lembretes de dose</span>
           <span class="ticker-separator">✦</span>
+          <span class="ticker-item">📢 Vacine_AI: tecnologia e saúde caminhando juntas!</span>
+         <span class="ticker-separator">✦</span>
+            <span class="ticker-item">🛡️ A vacinação previne doenças e salva milhões de vidas!</span>
+           <span class="ticker-separator">✦</span>
         </div>
 
         <!-- Bloco 2 (Duplicado para looping perfeito sem saltos) -->
@@ -60,20 +66,20 @@ require_once __DIR__ . "/../auth/autenticacao.php";
           <span class="ticker-separator">✦</span>
           <span class="ticker-item">💉 Mantenha sua dose de Hepatite B atualizada</span>
           <span class="ticker-separator">✦</span>
+        <span class="ticker-item">🌍 Cada pessoa vacinada contribui para uma comunidade mais protegida!</span>
+         <span class="ticker-separator">✦</span>
           <span class="ticker-item">🗓️ Baixe o app e receba os lembretes de dose</span>
           <span class="ticker-separator">✦</span>
+          <span class="ticker-item">📢 Vacine_AI: tecnologia e saúde caminhando juntas!</span>
+         <span class="ticker-separator">✦</span>
+            <span class="ticker-item">🛡️ A vacinação previne doenças e salva milhões de vidas!</span>
+           <span class="ticker-separator">✦</span>
         </div>
 
       </div>
     </div>
 
-
-
-
-
-
-
-
+  
 
             <?php if (Autenticacao::isLogado()): ?>
                 <a href="/vacine_ai/views/perfil.php" class="menu-link">Perfil</a>

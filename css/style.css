@@ -172,6 +172,70 @@ header {
 }
 
 
+            /* ------- canal de noticias movel ------*/
+
+            /* CAIXA CENTRAL DO LETREIRO */
+    .ticker-container {
+      flex: 1;
+      max-width: 1000px;
+      height: 38px;
+      background-color: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px; /* Bordas suavemente arredondadas */
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      cursor: pointer;
+    }
+
+    /* ESTRUTURA DA ANIMAÇÃO (DA DIREITA PARA A ESQUERDA) */
+    .ticker-wrapper {
+      display: flex;
+      white-space: nowrap;
+      animation: tickerRTL 25s linear infinite; /* Right To Left */
+    }
+
+    /* Pausa ao passar o rato para facilitar a leitura */
+    .ticker-container:hover .ticker-wrapper {
+      animation-play-state: paused;
+    }
+
+    .ticker-group {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .ticker-item {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #166534;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    /* ÍCONE SEPARADOR ENTRE AS FRASES */
+    .ticker-separator {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 1.2rem;
+      color: #10b981;
+      font-size: 0.8rem;
+    }
+
+    /* ANIMAÇÃO CSS INVERTIDA: DIREITA PARA A ESQUERDA */
+    @keyframes tickerRTL {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
 
 /* -------------------------- FIM HEADER -----------------------*/
 
