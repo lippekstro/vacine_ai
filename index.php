@@ -1,10 +1,12 @@
-
-
 <?php
 require_once __DIR__ . "/templates/_cabecalho.php";
+require_once __DIR__ . "/models/vacinacao.php";
 
-if(Autenticacao::isLogado()){
-$resutado = Vacinacao::listarFaltantesPorUsuario($_SESSION['id_usuario']);}
+if (Autenticacao::isLogado()) {
+    $resutado = Vacinacao::listarFaltantesPorUsuario($_SESSION['id_usuario']);
+}
+
+var_dump(!empty($resutado));
 
 ?>
 
@@ -13,92 +15,82 @@ $resutado = Vacinacao::listarFaltantesPorUsuario($_SESSION['id_usuario']);}
 
 
     <!--___________ primeira sessao________ -->
-<section class="hero-container">
-    <!-- caixa 1-->
-    <div class="info1">
-        <h5 style="font-weight: bold; padding-top: 10px;">   Cuidar da sua saúde<br>começa pela <span>prevenção.</span></h5>
-        <p>O VacineAi organiza sua carteira de vacinação, lembra você das próximas doses e protege o que mais importa: você e sua família.</p>
-       
-    </div>
-
-    <!-- caixa 2-->
-    <!--<div class="imagem-principal">-->
-        <img class= "imagem-principal-img" src="/vacine_ai/imgs/familia.png" alt="">
-    </div>
-
-    <!-- caixa 3-->
-    <div class="vacinas">
-    <!-- caixa 3.1-->
-        <div class="info2">
-            <div class="info2-titulo">
-            <!--texto de cima -->  
-            <h6 style="font-weight: bold; padding-top: 10px;"> Próximas doses</h5>
-            <a href="#">Ver todas</a>
-            </div>
-            
-          <!-- proximas doses --> 
-            <!-- estrutura de repeticao de php mostrar as vacinas do usuario pendentes ou proximas doses? --> 
-            <!--<div    class="vacinas-pendentes">  
-                  colocar icone generico que aparecerá automaticamente
-                <img src="imgs/icone-vacina.png" alt="">
-                  trazer do banco de dados 
-                   aqui pode ser br?
-                <p>Hepatite B - 3° dose <br> 24/11/2026  </p> 
-                  faltam quantos dias
-                  <div class="info2-dias">
-                    <p>Faltam 3 dias</p>
-                  </div>
-            </div> -->
-
-
-
-
-            
-            <table class="tabela-doses">
-                
-                <tr>
-                    <td rowspan="2" class="icone">💉</td>
-
-                    <td class="doses-vacinas">
-                        <p>Hepatite B - 3ª dose</p>
-                    </td>
-
-                    <td rowspan="2" class="dias">
-                        Faltam 3 dias
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <p>24/11/2026</p>
-                    </td>
-                </tr>
-            </table>
-
-
-
-        
-  
-            
+    <section class="hero-container">
+        <!-- caixa 1-->
+        <div class="info1">
+            <h5 style="font-weight: bold; padding-top: 10px;"> Cuidar da sua saúde<br>começa pela <span>prevenção.</span></h5>
+            <p>O VacineAi organiza sua carteira de vacinação, lembra você das próximas doses e protege o que mais importa: você e sua família.</p>
 
         </div>
 
+        <!-- caixa 2-->
+        <!--<div class="imagem-principal">-->
+        <img class="imagem-principal-img" src="/vacine_ai/imgs/familia.png" alt="">
+        </div>
 
-    <!-- caixa 3.2-->
-        <div class="alarme">
-            <div alarme-icone>
-            <img src="/vacine_ai/imgs/telefone.png" alt="">
-            </div >
-            <div class="alarme-info">
-                <p class="txt-subtitulo" "> Suas Vacinas na palma de sua mão!</p>
-                <p class="txt-titulo">Nunca mais esqueça        suas vacinas!</p>
-                <!--<p class="txt-subtitulo">  Ative seus lembretes e fique <br> sempre protegido.</p> -->
+        <!-- caixa 3-->
+        <div class="vacinas">
+            <!-- caixa 3.1-->
+            <?php if (!empty($resutado)) : ?>
+                <div class="info2">
+                    <div class="info2-titulo">
+                        <!--texto de cima -->
+                        <h6 style="font-weight: bold; padding-top: 10px;"> Próximas doses</h5>
+                            <a href="/vacine_ai/views/exibir_vacinas.php">Ver todas</a>
+                    </div>
+
+                    <table class="tabela-doses">
+
+
+                        <?php for ($i = 0; $i < count($resutado); $i++) : ?>
+
+                            <tr>
+                                <td rowspan="2" class="icone">💉</td>
+
+                                <td class="doses-vacinas">
+                                    <p><?= $resutado[$i]['nome_vacina']; ?></p>
+                                </td>
+
+
+                                <!-- aqui eu nao sei fazer.. -->
+
+                                <td rowspan="2" class="dias">
+                                    Faltam <?= (new DateTime('today'))->diff(new DateTime($resutado[$i]['dt_proxima']))->days ?> dias
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p><?= $resutado[$i]['dt_proxima']; ?></p>
+                                </td>
+                            </tr>
+                            <?php if($i == 1){break;} ?>
+                        <?php endfor; ?>
+                        <!-- else: tirar a div da tabela? reorganizar o hero.. -->
+                    </table>
+                </div>
+            <?php else : ?>
+                <!-- else:fazer ainda.. -->
+
+
+            <?php endif; ?>
+
+
+            <!-- caixa 3.2-->
+            <div class="alarme">
+                <div alarme-icone>
+                    <img src="/vacine_ai/imgs/telefone.png" alt="">
+                </div>
+                <div class="alarme-info">
+                    <p class="txt-subtitulo" "> Suas Vacinas na palma de sua mão!</p>
+                <p class=" txt-titulo">Nunca mais esqueça suas vacinas!</p>
+                    <!--<p class="txt-subtitulo">  Ative seus lembretes e fique <br> sempre protegido.</p> -->
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-  
+
 
 
 
@@ -154,16 +146,10 @@ $resutado = Vacinacao::listarFaltantesPorUsuario($_SESSION['id_usuario']);}
 
     </section>
 </main>
-       
 
-    </body>
+
+</body>
 
 <?php
 require_once __DIR__ . "/templates/_rodape.php";
 ?>
-
-
-
-
-
-

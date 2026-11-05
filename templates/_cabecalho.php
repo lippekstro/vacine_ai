@@ -35,7 +35,46 @@ require_once __DIR__ . "/../auth/autenticacao.php";
         </div>
 
         <nav class="menu">
-            <a href="/vacine_ai/index.php" class="menu-link">Início</a>
+           <!-- <a href="/vacine_ai/index.php" class="menu-link">Início</a>-->
+
+
+
+
+            <!--  Central  de noticias - -->
+    <div class="ticker-container">
+      <div class="ticker-wrapper">
+        
+        <!-- Bloco 1 -->
+        <div class="ticker-group">
+          <span class="ticker-item">📢 Campanha de Vacinação 2027 iniciada!</span>
+          <span class="ticker-separator">✦</span>
+          <span class="ticker-item">💉 Mantenha sua dose de Hepatite B atualizada</span>
+          <span class="ticker-separator">✦</span>
+          <span class="ticker-item">🗓️ Baixe o app e receba os lembretes de dose</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+
+        <!-- Bloco 2 (Duplicado para looping perfeito sem saltos) -->
+        <div class="ticker-group">
+          <span class="ticker-item">📢 Campanha de Vacinação 2027 iniciada!</span>
+          <span class="ticker-separator">✦</span>
+          <span class="ticker-item">💉 Mantenha sua dose de Hepatite B atualizada</span>
+          <span class="ticker-separator">✦</span>
+          <span class="ticker-item">🗓️ Baixe o app e receba os lembretes de dose</span>
+          <span class="ticker-separator">✦</span>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
             <?php if (Autenticacao::isLogado()): ?>
                 <a href="/vacine_ai/views/perfil.php" class="menu-link">Perfil</a>
                 <a href="/vacine_ai/views/cadastrar_vacina.php" class="menu-link">Cadastrar Vacina</a>
