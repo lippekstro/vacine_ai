@@ -126,8 +126,13 @@ main {
         90deg,
         #e4f7ee,
         #ffffff 40%,
-        #d9eee8
+        #d9eee8,
     );
+
+    background-image: url('/vacine_ai/imgs/alunos-senac.png');
+    background-size: cover;
+    background-position: center;
+
 }
 
 .hero-conteudo {

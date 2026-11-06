@@ -8,7 +8,7 @@
 
     <title>Sobre Nós | VacineAí</title>
 
-    <link rel="stylesheet" href="CSS/sobre.css">
+    <link rel="stylesheet" href="/vacine_ai/css/sobre.css">
 
     <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,15 +29,6 @@
             <img src="IMG/logo.png" alt="Logo VacineAí">
         </div>
 
-        <nav class="menu">
-
-            <a href="index.html">Início</a>
-            <a href="recursos.html">Recursos</a>
-            <a href="sobre.html" class="ativo">Sobre nós</a>
-            <a href="duvidas.html">Dúvidas</a>
-            <a href="contato.html">Contato</a>
-
-        </nav>
 
         <div class="botoes-header">
 
@@ -76,7 +67,7 @@
         </div>
 
         <div class="hero-imagem">
-            <img src="IMG/alunos-senac.jpg" alt="Alunos do SENAC trabalhando no projeto VacineAí">
+          <!--  <img src="/vacine_ai/imgs/alunos-senac.png" alt="">-->
         </div>
 
     </section>
