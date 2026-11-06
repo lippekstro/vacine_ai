@@ -30,7 +30,7 @@ require_once __DIR__ . "/../auth/autenticacao.php";
 
         <!-- ____________ TOPO ___________ -->
         <div class="logo">      
-          <!-- <img class="logo" src="/vacine_ai/imgs/logo2.png" alt=""> !-->
+          <img class="logo-img" src="/vacine_ai/imgs/logo2.png" alt=""> 
             <h2>Vacine<span>Ai</span></h2>
         </div>
 
