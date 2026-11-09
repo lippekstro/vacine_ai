@@ -4,6 +4,11 @@ require_once __DIR__ . "/../auth/autenticacao.php";
 
 Autenticacao::iniciarSessao();
 
+if (!Autenticacao::isLogado()) {
+    header('Location: /vacine_ai/views/login.php');
+    exit();
+}
+
 $usuario = $_SESSION['id_usuario'];
 $vacina = (int)$_POST['vacina'];
 $dose = (int)$_POST['dose'];

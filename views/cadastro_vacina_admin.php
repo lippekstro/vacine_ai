@@ -1,5 +1,10 @@
 <?php
 require_once __DIR__ . "/../templates/_cabecalho.php";
+
+if (!Autenticacao::isLogado()) {
+    header('Location: /vacine_ai/views/login.php');
+    exit();
+}
 ?>
 
 <main class="container">

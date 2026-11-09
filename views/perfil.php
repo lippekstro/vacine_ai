@@ -1,7 +1,11 @@
 <?php
 require_once __DIR__ . "/../templates/_cabecalho.php";
 require_once __DIR__ . "/../models/usuario.php";
-require_once __DIR__ . "/../auth/autenticacao.php";
+
+if (!Autenticacao::isLogado()) {
+    header('Location: /vacine_ai/views/login.php');
+    exit();
+}
 
 $usuario = new Usuario($_SESSION['id_usuario']);
 ?>
@@ -9,15 +13,15 @@ $usuario = new Usuario($_SESSION['id_usuario']);
 <main class="container py-5">
 
     <!-- Cabeçalho do perfil -->
-    <section class="text-center mb-4">
+    <section class="text-center mb-4 d-flex flex-column align-items-center">
 
-        <img
-            src="<?= htmlspecialchars($usuario->getFoto()) ?>"
-            alt="Foto de perfil"
-            class="rounded-circle img-thumbnail mb-3"
-            width="150"
-            height="150"
-            style="object-fit: cover;">
+        <?php if($usuario->getFoto() != null): ?>
+            <img src="/vacine_ai/imgs/fotos/<?= htmlspecialchars($usuario->getFoto()) ?>" alt="Foto de perfil" class="rounded-circle img-thumbnail mb-3" width="80" height="80" style="object-fit: cover; min-width: 80px; min-height: 80px">
+        <?php else: ?>
+            <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center" style="width: 80px; height: 80px">
+                <?= mb_strtoupper(mb_substr($usuario->getNome(), 0, 1)) ?>
+            </div>
+        <?php endif; ?>
 
         <h1 class="fw-bold text-success">
             Meu perfil

@@ -64,6 +64,35 @@ class Usuario
         $stmt->execute();
     }
 
+    public function atualizar() {
+        $sql = "UPDATE usuario SET email = :email, dt_nascimento = :dt_nascimento, genero = :genero, cpf = :cpf, telefone = :telefone, foto = :foto, nome = :nome WHERE id_usuario = :id";
+        $conn = Conexao::conectar();
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(":email", $this->getEmail());
+        $stmt->bindValue(":dt_nascimento", $this->getNascimento());
+        $stmt->bindValue(":genero", $this->getGenero());
+        $stmt->bindValue(":cpf", $this->getCpf());
+        $stmt->bindValue(":telefone", $this->getTelefone());
+        $stmt->bindValue(":foto", $this->getFoto());
+        $stmt->bindValue(":nome", $this->getNome());
+        $stmt->bindValue(":id", $this->getId());
+        $stmt->execute();
+    }
+
+    public function atualizarSemFoto() {
+        $sql = "UPDATE usuario SET email = :email, dt_nascimento = :dt_nascimento, genero = :genero, cpf = :cpf, telefone = :telefone, nome = :nome WHERE id_usuario = :id";
+        $conn = Conexao::conectar();
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(":email", $this->getEmail());
+        $stmt->bindValue(":dt_nascimento", $this->getNascimento());
+        $stmt->bindValue(":genero", $this->getGenero());
+        $stmt->bindValue(":cpf", $this->getCpf());
+        $stmt->bindValue(":telefone", $this->getTelefone());
+        $stmt->bindValue(":nome", $this->getNome());
+        $stmt->bindValue(":id", $this->getId());
+        $stmt->execute();
+    }
+
     public function getId()
     {
         return $this->id_usuario;

@@ -9,9 +9,9 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
             <div class="col-12 col-md-8 col-lg-6">
 
                 <div class="card shadow border-0">
-                    <div class="card-body p-4 p-md-5">
+                    <div class="card-body p-8 p-md-5">
 
-                        <h2 class="text-center mb-4">Criar conta</h2>
+                        <h2 class="criar-conta">Criar conta</h2>
 
                         <form action = "/vacine_ai/controllers/usuario_add_controller.php" method = "POST" enctype = "multipart/form-data">
                             <div class="mb-3">
@@ -103,8 +103,8 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                     class="form-control"
                                     name="foto"
                                     id="foto"
-                                    placeholder="Selecione uma imagem"
-                                    required>
+                                    accept="image/*"
+                                    placeholder="Selecione uma imagem">
                             </div>
 
 
@@ -134,7 +134,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                     required>
                             </div>
 
-                            <button
+                            <button class = "btn-enter"
                                 type="submit"
                                 class="btn btn-primary w-100">
                                 Cadastrar
