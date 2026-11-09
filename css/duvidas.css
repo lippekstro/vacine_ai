@@ -1,0 +1,425 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #102d4d;
+    background: #fff;
+}
+
+/* CABEÇALHO */
+
+.header {
+    min-height: 70px;
+    padding: 12px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #103653;
+}
+
+.logo span {
+    color: #009e70;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a,
+.footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu a {
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+.menu a:hover,
+.menu .ativo {
+    color: #009e70;
+    border-bottom: 2px solid #009e70;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.botoes a {
+    padding: 11px 18px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.entrar {
+    color: #009e70;
+    border: 1px solid #009e70;
+}
+
+.criar {
+    background: #009e70;
+    color: white;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 310px;
+    padding: 45px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(100deg, #e9f8f1, #fff);
+}
+
+.hero-texto {
+    max-width: 550px;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 20px;
+    background: #009e70;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    margin: 20px 0 12px;
+    font-size: 42px;
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    display: block;
+    color: #009e70;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.hero-imagem {
+    width: 300px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ilustracao {
+    width: 210px;
+    height: 190px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d6f4e6;
+    border-radius: 50%;
+}
+
+.interrogacao {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 55px;
+    color: #009e70;
+    font-weight: bold;
+}
+
+.escudo {
+    font-size: 65px;
+    color: #009e70;
+}
+
+.calendario {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 35px;
+}
+
+.pessoa {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    font-size: 35px;
+}
+
+
+/* PESQUISA */
+
+.pesquisa {
+    max-width: 650px;
+    margin: 35px auto;
+    display: flex;
+    border: 1px solid #dce5e3;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.pesquisa input {
+    flex: 1;
+    padding: 17px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.pesquisa button {
+    width: 60px;
+    border: none;
+    background: #009e70;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* PERGUNTAS */
+
+.faq {
+    max-width: 1100px;
+    margin: 55px auto;
+    padding: 0 20px;
+}
+
+.titulo-secao {
+    margin-bottom: 25px;
+}
+
+.titulo-secao h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.titulo-secao h2::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: #009e70;
+    margin-bottom: 12px;
+    border-radius: 5px;
+}
+
+.titulo-secao p {
+    color: #526477;
+}
+
+.faq-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.faq-item {
+    border: 1px solid #dce5e3;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+}
+
+.pergunta {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: white;
+    border: none;
+    color: #102d4d;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+.pergunta:hover {
+    color: #009e70;
+}
+
+.seta {
+    color: #009e70;
+    font-size: 25px;
+}
+
+.resposta {
+    display: none;
+    padding: 0 20px 20px;
+    color: #526477;
+    line-height: 1.6;
+}
+
+.faq-item.aberto .resposta {
+    display: block;
+}
+
+.faq-item.aberto .seta {
+    transform: rotate(45deg);
+}
+
+.sem-resultado {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    color: #526477;
+}
+
+
+/* ÁREA DE AJUDA */
+
+.ajuda {
+    margin: 60px 4%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: 25px;
+    background: #dcf6e9;
+}
+
+.ajuda-icone {
+    font-size: 40px;
+    color: #009e70;
+}
+
+.ajuda-texto {
+    flex: 1;
+}
+
+.ajuda-texto h2 {
+    margin-bottom: 8px;
+}
+
+.ajuda-texto p {
+    color: #526477;
+}
+
+.btn-contato {
+    padding: 14px 22px;
+    background: #009e70;
+    color: white;
+    text-decoration: none;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+
+/* RODAPÉ */
+
+.footer {
+    padding: 30px 5%;
+    background: #00644f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-logo p {
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+.footer nav {
+    display: flex;
+    gap: 25px;
+}
+
+.redes {
+    display: flex;
+    gap: 18px;
+    font-size: 22px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 850px) {
+
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 35px 5%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .faq-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-imagem {
+        height: 180px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .ajuda {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .botoes {
+        justify-content: center;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+}
