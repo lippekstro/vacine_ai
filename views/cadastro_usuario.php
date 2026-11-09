@@ -104,8 +104,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                                     name="foto"
                                     id="foto"
                                     accept="image/*"
-                                    placeholder="Selecione uma imagem"
-                                    required>
+                                    placeholder="Selecione uma imagem">
                             </div>
 
 
