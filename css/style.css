@@ -13,7 +13,6 @@ body {
     background:
         linear-gradient(rgb(173 255 210 / 19%), rgb(26 64 65 / 66%)),
         url('../assets/img/fundo-vacina.jpg');
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,6 +21,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 
 .caixa-formulario {
     width: 100%;
@@ -109,212 +109,710 @@ body {
     align-items: center;
 }
 
-/* -------------------------- INICIO HEADER -----------------------*/
+
+/* -------------------------- INICIO HEADER ----------------------- */
 
 header {
     display: flex;
     justify-content: space-between;
-    padding: 7px 3%;
-
-    /*DEPOIS TEM QUE TROCAR ESSA COR*/
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 9px 3%;
     background-color: rgb(232, 245, 241);
     border-bottom: 1px solid #c5eec0;
 }
 
 .logo {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 8px;
-
+    max-width: 100%;
+    height: 100%;
+    gap: 2px;
 }
 
+.logo-img {
+    max-width: 40px;
+    height: 100%;
+}
 
-.logo h2 {}
+.logo h2 {
+    padding-top: 8.5px;
+}
 
 .logo span {
-    color: rgb(235, 9, 9);
-    font-size: 38px;
-    gap: 1.5px;
-
+    color: rgb(4, 136, 43);
+    font-size: 30px;
 }
-
 
 .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 28px;
 }
 
 .menu-link {
     font-size: 18px;
     text-decoration: none;
-    color: black
+    color: black;
+}
+
+.botoes-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.botoes {
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 8px;
+    text-decoration: none;
+    background-color: rgb(4, 136, 43);
+    color: white;
 }
 
 
-.botoes-topo {
+/* ------- canal de noticias movel ------ */
 
+/* CAIXA CENTRAL DO LETREIRO */
+
+.ticker-container {
+    flex: 1;
+    width: 100%;
+    max-width: 800px;
+    height: 38px;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+}
+
+/* ESTRUTURA DA ANIMAÇÃO (DA DIREITA PARA A ESQUERDA) */
+
+.ticker-wrapper {
+    display: flex;
+    white-space: nowrap;
+    animation: tickerRTL 25s linear infinite;
+}
+
+/* Pausa ao passar o rato para facilitar a leitura */
+
+.ticker-container:hover .ticker-wrapper {
+    animation-play-state: paused;
+}
+
+.ticker-group {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.ticker-item {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #166534;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* ÍCONE SEPARADOR ENTRE AS FRASES */
+
+.ticker-separator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1.2rem;
+    color: #10b981;
+    font-size: 0.8rem;
+}
+
+/* ANIMAÇÃO CSS INVERTIDA: DIREITA PARA A ESQUERDA */
+
+@keyframes tickerRTL {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+
+/* -------------------------- FIM HEADER ----------------------- */
+
+
+/* ------------------------------ MAIN ------------------------ */
+
+
+/* ÁREA PRINCIPAL */
+
+.hero-container {
+    width: 100%;
+    max-width: 100%;
+    min-height: 459px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-image: url('/vacine_ai/imgs/banner_inicio.png');
+    background-size: cover;
+    background-position: center;
+    padding: 25px 26px 25px 7.5%;
+}
+
+
+/* ------------------------------ informacoes 1 ------------------------ */
+
+.info1 {
+    flex: 1 1 280px;
+    width: 100%;
+    max-width: 500px;
+    min-width: 0;
+    min-height: 180px;
+    height: auto;
+    display: block;
+    padding: 20px;
+    padding-left: 22px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+.info1 h {
+    font-size: 36px;
+    color: black;
+    display: block;
+    padding-top: 10px;
+}
+
+.info1 h5 {
+    font-size: 36px;
+    color: black;
+    display: block;
+    padding-top: 10px;
+}
+
+.info1 span {
+    color: rgb(4, 136, 43);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info1 p {
+    padding-inline-end: 20px;
+    padding-top: 3%;
+    font-size: 15px;
+    color: black;
+    text-align: justify;
+}
+
+
+/* ------------------------------ imagem-principal ------------------------ */
+
+.imagem-principal {
+    flex: 1 1 280px;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem-principal-img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ------------------------------ vacinas pendentes/ lembretes ------------ */
+
+.vacinas {
+    flex: 1 1 280px;
+    width: 100%;
+    max-width: 350px;
+    min-width: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.info2 {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    margin-left: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #e1f7e2;
+}
+
+.info2-titulo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 8px;
 }
 
-.botoes {
-
-    font-size: 15px;
-    border-radius: 10px;
-    padding: 8px;
+.info2-titulo a {
+    font-size: 13px;
     text-decoration: none;
-    /* depois mudar a cor*/
-    background-color: rgb(4, 136, 43);
-    /*depois precisamos mudar a cor para ficar igual do prototipo*/
-    color: white
+    white-space: nowrap;
 }
 
-
-
-/* -------------------------- FIM HEADER -----------------------*/
-
-
-/*------------------------------ main ------------------------*/
-.info_1 {
-    padding-top: 0;
-    margin-top: 0;
-
-}
-
-.imagem-principal {
+.vacinas-pendentes {
+    width: 100%;
     max-width: 100%;
-    height: auto;
-
-}
-
-.hero-container {
+    height: 100px;
+    background-color: white;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    /* Altere o padding aqui: 5% em cima/embaixo, 5px nas laterais */
-    padding: 5% 30px;
-    min-height: 100vh;
-    background-image: url('/vacine_ai/imgs/inicio.jpg');
-    background-color: #f4faf4;
-    background-size: cover;
-    background-position: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 4px;
+    gap: 8px;
+    overflow-x: auto;
 }
 
-.text-section {
-    max-width: 450px;
-    background-color: #ffffff;
-    border-radius: 16px;
-    /* Reduza um pouco o padding interno para os elementos caberem melhor na caixa menor */
+.vacinas-pendentes p {
+    font-size: 12px;
+}
+
+.info2-dias {
+    font-size: 10px;
+    height: 25px;
+    background-color: rgba(244, 156, 23, 0.168);
+    color: rgba(244, 156, 23, 0.975);
+    border-radius: 9.5px;
+    padding: 5px;
+    margin-right: 3px;
+}
+
+.tabela-doses {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    font-size: 12px;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
-.text-section h1 {
-    font-size: 2.5rem;
-    color: #0c2b3e;
-    margin-bottom: 20px;
+.tabela-doses td {
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.tabela-doses p {
+    margin: 0;
     line-height: 1.2;
 }
 
-.text-section h1 span {
-    color: #118d57;
+.icone {
+    text-align: center;
+    width: 50px;
 }
 
-.text-section p {
-    font-size: 1.1rem;
-    color: #334e5e;
-    line-height: 1.5;
-    text-align: justify;
+.dias {
+    width: 130px;
+    text-align: end;
+    white-space: nowrap;
+    font-size: 10px;
+    padding-right: 5px;
 }
 
-.carousel-section {
+.tabela-doses td:nth-child(2) {
+    white-space: nowrap;
+}
+
+.alarme {
+    width: calc(100% - 32px);
+    min-height: 90px;
+    height: auto;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    background-color: #e1f7e2;
+    margin-left: 14px;
+    margin-right: 18px;
+    margin-top: 7px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+[alarme-icone] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+[alarme-icone] img {
+    max-width: 100%;
+    height: auto;
+}
+
+.alarme-info {
+    display: block;
     width: 100%;
-    /* Diminua este valor. Antes era 350px, mude para 280px ou 300px */
-    max-width: 280px;
+    max-width: 210px;
+    min-height: 80px;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-inline-end: 8px;
+    margin-top: 18px;
+    margin-bottom: 30px;
+    font-weight: bold;
 }
 
-.carousel-card {
-    background-color: #ffffff;
-    border-radius: 16px;
-    /* Reduza um pouco o padding interno para os elementos caberem melhor na caixa menor */
-    padding: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+.txt-titulo {
+    font-size: 18px;
+    color: rgb(4, 136, 43);
+    line-height: 1.2;
+    margin: 5px 0;
 }
 
-.carousel-header {
+.txt-subtitulo {
+    font-size: 9px;
+    margin: 0;
+}
+
+
+/* ------------------------------ banner-carrossel ------------------------ */
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+#carouselExampleAutoplaying {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#carouselExampleAutoplaying .carousel-inner {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#carouselExampleAutoplaying .carousel-item {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#carouselExampleAutoplaying .carousel-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* ------------------------------ fim main ------------------------ */
+
+
+/* ------------------------------ footer ------------------------ */
+
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    background: #fff;
+}
+
+.linha {
+    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding-top: 10px;
+    border-top: #e7f0ec solid 1px;
+}
+
+
+/* PARTE INFERIOR */
+
+.footer-bottom {
+    width: 100%;
+    margin-top: 10px;
+    background: linear-gradient(110deg, #00583f, #003d32);
+    min-height: 60px;
+    padding: 2px 4%;
+    display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    justify-content: space-between;
+    gap: 25px;
+    color: #fff;
 }
 
-.carousel-header h3 {
-    font-size: 1rem;
-    color: #0c2b3e;
+
+/* LOGO */
+
+.footer-brand h2 {
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.carousel-header a {
-    font-size: 0.8rem;
-    color: #118d57;
+
+/* MENU */
+
+.footer-menu {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.footer-menu a {
+    color: #fff;
     text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
 }
 
-.card-dose-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f0f0;
+.footer-menu a:hover {
+    color: #8ee4bd;
 }
 
-.card-dose-item:last-child {
-    border-bottom: none;
-}
 
-.banner-card {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background-color: #e6f4ea;
-}
+/* ------------------------------ RESPONSIVIDADE ------------------------ */
 
-/*------------------------------ banner-carrossel ------------------------*/
 
-/*carousel-item{
-     /*   width: auto;
-     /*   height: 40px;
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    header {
+        justify-content: center;
     }
 
-    /*------------------------------ banner-carrossel ------------------------*/
+    .menu {
+        justify-content: center;
+        gap: 18px;
+    }
 
+    .hero-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        padding: 25px 3%;
+    }
 
+    .info1 {
+        flex: 1 1 300px;
+    }
 
-/*------------------------------ fim main ------------------------*/
-/*------------------------------ footer ------------------------*/
-footer {
-    width: 100%;
-    margin-top: auto;
-    padding: 0;
+    .imagem-principal {
+        flex: 1 1 300px;
+    }
 
-    bottom: 0;
-    left: 0;
+    .vacinas {
+        flex: 1 1 300px;
+        max-width: 500px;
+    }
 
+    .info2 {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .alarme {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-bottom {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-menu {
+        gap: 22px;
+    }
 }
 
 
-footer img {
-    width: 100%;
-    /* Força a imagem a ocupar 100% da largura disponível */
-    display: block;
-    height: 60px;
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 12px 15px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .logo h2 {
+        font-size: 22px;
+    }
+
+    .logo span {
+        font-size: 25px;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .menu-link {
+        font-size: 15px;
+    }
+
+    .botoes-topo {
+        justify-content: center;
+    }
+
+    .ticker-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        min-height: auto;
+        padding: 25px 15px;
+    }
+
+    .info1,
+    .imagem-principal,
+    .vacinas {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .info1 {
+        min-height: auto;
+        text-align: center;
+        padding: 18px;
+    }
+
+    .info1 h5 {
+        font-size: 27px;
+    }
+
+    .info1 span {
+        font-size: 22px;
+    }
+
+    .info1 p {
+        padding-inline-end: 0;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .imagem-principal-img {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .info2 {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .tabela-doses {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .tabela-doses td {
+        padding: 5px 3px;
+    }
+
+    .dias {
+        width: auto;
+        font-size: 9px;
+    }
+
+    .tabela-doses td:nth-child(2) {
+        white-space: normal;
+    }
+
+    .alarme {
+        width: 100%;
+        min-height: 90px;
+        margin: 7px 0 0;
+        justify-content: center;
+    }
+
+    .alarme-info {
+        max-width: 210px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .txt-titulo {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    #carouselExampleAutoplaying {
+        border-radius: 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        padding: 30px 15px;
+        gap: 25px;
+    }
+
+    .footer-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px 25px;
+    }
+
+    .linha {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
 }
 
 /*------------------------------ fim footer ------------------------*/
