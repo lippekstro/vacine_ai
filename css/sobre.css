@@ -129,7 +129,7 @@ main {
         #d9eee8,
     );
 
-    background-image: url('/vacine_ai/imgs/alunos-senac.png');
+    background-image: url('/vacine_ai/imgs/alunos.png');
     background-size: cover;
     background-position: center;
 
@@ -137,25 +137,17 @@ main {
 
 .hero-conteudo {
     width: 43%;
+    height: 40px;
     padding: 40px 6%;
     z-index: 2;
 }
 
-.etiqueta {
-    display: inline-block;
-    padding: 5px 14px;
-    border-radius: 30px;
-    background: #00ae78;
-    color: white;
-    font-size: 13px;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
 
 .hero h1 {
-    font-size: clamp(30px, 4vw, 49px);
+    font-size: clamp(15px, 2vw, 20px);
     line-height: 1.08;
     font-weight: 800;
+    
 }
 
 .hero h1 span {
@@ -163,9 +155,10 @@ main {
 }
 
 .hero-conteudo p {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.4;
+    gap: 10px;
     margin-top: 12px;
 }
 
@@ -289,6 +282,7 @@ main {
 
 .solucao-conteudo {
     flex: 1;
+    
 }
 
 .solucao-conteudo h3 {
@@ -481,7 +475,7 @@ main {
 
 .assinatura img {
     width: 130px;
-    max-height: 65px;
+    max-height: 85px;
     object-fit: contain;
 }
 
@@ -509,7 +503,7 @@ main {
 
 .footer {
     width: 100%;
-    min-height: 85px;
+    min-height: 50px;
     background: linear-gradient(90deg, #006a56, #005f50);
     color: white;
     padding: 15px 4%;
@@ -519,10 +513,7 @@ main {
     gap: 20px;
 }
 
-.footer-logo img {
-    width: 155px;
-    filter: brightness(0) invert(1);
-}
+
 
 .footer-logo p {
     font-size: 10px;
@@ -531,6 +522,8 @@ main {
 
 .footer-menu {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 30px;
 }
 
@@ -549,15 +542,6 @@ main {
     gap: 22px;
 }
 
-.redes-sociais a {
-    font-size: 23px;
-    transition: 0.3s;
-}
-
-.redes-sociais a:hover {
-    color: #9cf0c9;
-    transform: translateY(-3px);
-}
 
 
 /* =====================================

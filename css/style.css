@@ -109,15 +109,16 @@ body {
     align-items: center;
 }
 
-/* -------------------------- INICIO HEADER -----------------------*/
+
+/* -------------------------- INICIO HEADER ----------------------- */
 
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
     padding: 9px 3%;
-
-
-    /*DEPOIS TEM QUE TROCAR ESSA COR*/
     background-color: rgb(232, 245, 241);
     border-bottom: 1px solid #c5eec0;
 }
@@ -125,71 +126,69 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    max-width: 40px;
+    max-width: 100%;
     height: 100%;
     gap: 2px;
 }
+
 .logo-img {
     max-width: 40px;
-    height:100%;
+    height: 100%;
 }
-.logo h2{
+
+.logo h2 {
     padding-top: 8.5px;
 }
+
 .logo span {
     color: rgb(4, 136, 43);
     font-size: 30px;
-    
-
 }
-
 
 .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 28px;
 }
 
 .menu-link {
     font-size: 18px;
     text-decoration: none;
-    color: black
+    color: black;
 }
 
-
 .botoes-topo {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 8px;
 }
 
 .botoes {
-
     font-size: 13px;
     border-radius: 10px;
     padding: 8px;
     text-decoration: none;
-    /* depois mudar a cor*/
     background-color: rgb(4, 136, 43);
-    /*depois precisamos mudar a cor para ficar igual do prototipo*/
-    color: white
+    color: white;
 }
 
 
-/* ------- canal de noticias movel ------*/
+/* ------- canal de noticias movel ------ */
 
 /* CAIXA CENTRAL DO LETREIRO */
+
 .ticker-container {
     flex: 1;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 800px;
     height: 38px;
     background-color: #f0fdf4;
     border: 1px solid #bbf7d0;
     border-radius: 8px;
-    /* Bordas suavemente arredondadas */
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -199,14 +198,15 @@ header {
 }
 
 /* ESTRUTURA DA ANIMAÇÃO (DA DIREITA PARA A ESQUERDA) */
+
 .ticker-wrapper {
     display: flex;
     white-space: nowrap;
     animation: tickerRTL 25s linear infinite;
-    /* Right To Left */
 }
 
 /* Pausa ao passar o rato para facilitar a leitura */
+
 .ticker-container:hover .ticker-wrapper {
     animation-play-state: paused;
 }
@@ -226,6 +226,7 @@ header {
 }
 
 /* ÍCONE SEPARADOR ENTRE AS FRASES */
+
 .ticker-separator {
     display: inline-flex;
     align-items: center;
@@ -236,6 +237,7 @@ header {
 }
 
 /* ANIMAÇÃO CSS INVERTIDA: DIREITA PARA A ESQUERDA */
+
 @keyframes tickerRTL {
     0% {
         transform: translate3d(0, 0, 0);
@@ -247,34 +249,19 @@ header {
 }
 
 
-/* -------------------------- FIM HEADER -----------------------*/
+/* -------------------------- FIM HEADER ----------------------- */
 
 
+/* ------------------------------ MAIN ------------------------ */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*------------------------------ main ------------------------*/
-
-
-
+/* ÁREA PRINCIPAL */
 
 .hero-container {
+    width: 100%;
     max-width: 100%;
-    height: 459px;
+    min-height: 459px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -282,24 +269,24 @@ header {
     background-image: url('/vacine_ai/imgs/banner_inicio.png');
     background-size: cover;
     background-position: center;
-    padding-top: 25px;
-    padding-left: 7.5%;
-    padding-right: 26px;
+    padding: 25px 26px 25px 7.5%;
 }
 
-/*------------------------------ infomacoes 1 ------------------------*/
+
+/* ------------------------------ informacoes 1 ------------------------ */
 
 .info1 {
+    flex: 1 1 280px;
+    width: 100%;
     max-width: 500px;
-    height: 180px;
+    min-width: 0;
+    min-height: 180px;
+    height: auto;
     display: block;
-    justify-content: space-between;
-    align-items: center;
     padding: 20px;
     padding-left: 22px;
     border-radius: 10px;
     background-color: #f5f5f5;
-
 }
 
 .info1 h {
@@ -307,13 +294,19 @@ header {
     color: black;
     display: block;
     padding-top: 10px;
-    /*font-weight: bold*/
+}
+
+.info1 h5 {
+    font-size: 36px;
+    color: black;
+    display: block;
+    padding-top: 10px;
 }
 
 .info1 span {
     color: rgb(4, 136, 43);
     font-size: 24px;
-    font-weight: bold
+    font-weight: bold;
 }
 
 .info1 p {
@@ -325,76 +318,78 @@ header {
 }
 
 
-/*------------------------------ imagem-principal ------------------------*/
-/* .imagem-principal{
-        max-width: 400px;
-        height: 100%; 
-        padding-left: 0; 
-        padding-right: px;
-        background-color: #f3d7e1;
-        gap: 2pix;
+/* ------------------------------ imagem-principal ------------------------ */
 
-    }*/
-.imagem-principal-img {
-    max-width: 600px;
-    height: 100%;
-
-
-
+.imagem-principal {
+    flex: 1 1 280px;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/*------------------------------ vacinas pendentes/ lembretes ------------*/
+.imagem-principal-img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ------------------------------ vacinas pendentes/ lembretes ------------ */
 
 .vacinas {
+    flex: 1 1 280px;
+    width: 100%;
     max-width: 350px;
-    height: 100%;
-
+    min-width: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: auto;
     gap: 20px;
     border-radius: 10px;
-
 }
 
 .info2 {
+    width: 100%;
     max-width: 90%;
-    height: 60%;
+    height: auto;
     display: block;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
     margin-top: 10px;
     margin-left: 15px;
     padding: 20px;
     border-radius: 10px;
     background-color: #e1f7e2;
-
 }
 
 .info2-titulo {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
 }
 
 .info2-titulo a {
     font-size: 13px;
     text-decoration: none;
+    white-space: nowrap;
 }
 
-
-
 .vacinas-pendentes {
-    max-width: auto;
+    width: 100%;
+    max-width: 100%;
     height: 100px;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 10px;
-    padding: 4px 4px;
+    padding: 4px;
     gap: 8px;
+    overflow-x: auto;
 }
 
 .vacinas-pendentes p {
@@ -418,7 +413,8 @@ header {
     border-radius: 20px;
     padding: 20px;
     font-size: 12px;
-
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
 .tabela-doses td {
@@ -434,7 +430,6 @@ header {
 .icone {
     text-align: center;
     width: 50px;
-
 }
 
 .dias {
@@ -445,13 +440,14 @@ header {
     padding-right: 5px;
 }
 
-td:nth-child(2) {
+.tabela-doses td:nth-child(2) {
     white-space: nowrap;
 }
 
 .alarme {
-    max-width: px;
-    height: 90px;
+    width: calc(100% - 32px);
+    min-height: 90px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -460,29 +456,34 @@ td:nth-child(2) {
     margin-left: 14px;
     margin-right: 18px;
     margin-top: 7px;
+    padding: 8px;
     border-radius: 10px;
+}
 
+[alarme-icone] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
 
-
-
+[alarme-icone] img {
+    max-width: 100%;
+    height: auto;
 }
 
 .alarme-info {
     display: block;
+    width: 100%;
     max-width: 210px;
-    height: 80px;
+    min-height: 80px;
+    height: auto;
     padding-top: 15px;
     padding-bottom: 20px;
     padding-inline-end: 8px;
     margin-top: 18px;
     margin-bottom: 30px;
     font-weight: bold;
-
-
-
-
-
-
 }
 
 .txt-titulo {
@@ -498,68 +499,48 @@ td:nth-child(2) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*------------------------------ banner-carrossel ------------------------*/
+/* ------------------------------ banner-carrossel ------------------------ */
 
 .container {
+    width: 100%;
+    max-width: 100%;
     margin-top: 10px;
-
-    #carouselExampleAutoplaying {
-        border-radius: 15px;
-    }
-
-    .carousel-item {
-        border-radius: 15px;
-    }
 }
 
-/* ver com o professor como deixar o slide com borda rrendondada.. não esquecer*/
+#carouselExampleAutoplaying {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#carouselExampleAutoplaying .carousel-inner {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#carouselExampleAutoplaying .carousel-item {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#carouselExampleAutoplaying .carousel-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
 
-
-/*------------------------------ banner-carrossel ------------------------*/
-
+/* ------------------------------ fim main ------------------------ */
 
 
-/*------------------------------ fim main ------------------------*/
-/*------------------------------ footer ------------------------*/
-
-
-
-
-
-
+/* ------------------------------ footer ------------------------ */
 
 
 /* FOOTER */
+
 .footer {
     width: 100%;
     background: #fff;
-
 }
 
 .linha {
@@ -569,16 +550,15 @@ td:nth-child(2) {
     justify-content: space-between;
     padding-top: 10px;
     border-top: #e7f0ec solid 1px;
-
 }
 
 
 /* PARTE INFERIOR */
+
 .footer-bottom {
+    width: 100%;
     margin-top: 10px;
-    background: linear-gradient(110deg,
-            #00583f,
-            #003d32);
+    background: linear-gradient(110deg, #00583f, #003d32);
     min-height: 60px;
     padding: 2px 4%;
     display: flex;
@@ -588,17 +568,17 @@ td:nth-child(2) {
     color: #fff;
 }
 
+
 /* LOGO */
+
 .footer-brand h2 {
     font-size: 18px;
     font-weight: 700;
-
 }
 
 
-
-
 /* MENU */
+
 .footer-menu {
     display: flex;
     align-items: center;
@@ -617,12 +597,52 @@ td:nth-child(2) {
 }
 
 
-
+/* ------------------------------ RESPONSIVIDADE ------------------------ */
 
 
 /* TABLET */
+
 @media (max-width: 900px) {
 
+    header {
+        justify-content: center;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .hero-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        padding: 25px 3%;
+    }
+
+    .info1 {
+        flex: 1 1 300px;
+    }
+
+    .imagem-principal {
+        flex: 1 1 300px;
+    }
+
+    .vacinas {
+        flex: 1 1 300px;
+        max-width: 500px;
+    }
+
+    .info2 {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .alarme {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 
     .footer-bottom {
         flex-wrap: wrap;
@@ -635,9 +655,146 @@ td:nth-child(2) {
     }
 }
 
+
 /* CELULAR */
+
 @media (max-width: 600px) {
 
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 12px 15px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .logo h2 {
+        font-size: 22px;
+    }
+
+    .logo span {
+        font-size: 25px;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .menu-link {
+        font-size: 15px;
+    }
+
+    .botoes-topo {
+        justify-content: center;
+    }
+
+    .ticker-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        min-height: auto;
+        padding: 25px 15px;
+    }
+
+    .info1,
+    .imagem-principal,
+    .vacinas {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .info1 {
+        min-height: auto;
+        text-align: center;
+        padding: 18px;
+    }
+
+    .info1 h5 {
+        font-size: 27px;
+    }
+
+    .info1 span {
+        font-size: 22px;
+    }
+
+    .info1 p {
+        padding-inline-end: 0;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .imagem-principal-img {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .info2 {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .tabela-doses {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .tabela-doses td {
+        padding: 5px 3px;
+    }
+
+    .dias {
+        width: auto;
+        font-size: 9px;
+    }
+
+    .tabela-doses td:nth-child(2) {
+        white-space: normal;
+    }
+
+    .alarme {
+        width: 100%;
+        min-height: 90px;
+        margin: 7px 0 0;
+        justify-content: center;
+    }
+
+    .alarme-info {
+        max-width: 210px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .txt-titulo {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    #carouselExampleAutoplaying {
+        border-radius: 10px;
+    }
 
     .footer-bottom {
         flex-direction: column;
@@ -651,7 +808,9 @@ td:nth-child(2) {
         gap: 18px 25px;
     }
 
+    .linha {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
 
 }
-
-/*------------------------------ fim footer ------------------------*/

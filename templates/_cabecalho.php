@@ -11,15 +11,24 @@ require_once __DIR__ . "/../auth/autenticacao.php";
     
   
     <title>Vacine Ai</title>
-
+<!------------------------- LINKS DO FONTES ---------------------------------->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+<!------------------------- LINKS DO CSS ---------------------------------->
     <link rel="stylesheet" href="/vacine_ai/css/bootstrap.css">
     <link rel="stylesheet" href="/vacine_ai/css/style.css">
+    <link rel="stylesheet" href="/vacine_ai/css/contatos.css">
+    <link rel="stylesheet" href="/vacine_ai/css/duvidas.css">
+    <link rel="stylesheet" href="/vacine_ai/css/sobre.css">
     
-
+<!------------------------- LINKS DO JS ---------------------------------->
     <script src="/vacine_ai/js/bootstrap.js"></script>
 
+<!------------------------- LINKS DOS ÍCONES ---------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
  
     
@@ -31,7 +40,7 @@ require_once __DIR__ . "/../auth/autenticacao.php";
         <!-- ____________ TOPO ___________ -->
         <div class="logo">      
           <img class="logo-img" src="/vacine_ai/imgs/logo2.png" alt=""> 
-            <h2>Vacine<span>Ai</span></h2>
+            <h2><a href="/vacine_ai/index.php">Vacine<span>Ai</span></a></h2>
         </div>
 
         <nav class="menu">

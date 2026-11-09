@@ -16,9 +16,9 @@
 
             <nav class="footer-menu">
                 <a href="/vacine_ai/index.php">Início</a>
-                <a href="/vacine_ai/views/sobre_nos.php">">Sobre</a>
-                <a href="#">Dúvidas</a>
-                <a href="#">Contato</a>
+                <a href="/vacine_ai/views/sobre_nos.php">Sobre</a>
+                <a href="/vacine_ai/views/duvidas.php">Dúvidas</a>
+                <a href="/vacine_ai/views/contatos.php">Contato</a>
             </nav>
         </div>
     </div>

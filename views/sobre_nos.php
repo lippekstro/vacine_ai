@@ -1,56 +1,15 @@
 
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sobre Nós | VacineAí</title>
-
-    <link rel="stylesheet" href="/vacine_ai/css/sobre.css">
-
-    <!-- Fonte -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-</head>
-
-<body>
-
-    <!-- CABEÇALHO -->
-    <header class="header">
-
-        <div class="logo">
-            <img src="IMG/logo.png" alt="Logo VacineAí">
-        </div>
+<?php
+require_once __DIR__ . "/../templates/_cabecalho.php";
 
 
-        <div class="botoes-header">
 
-            <a href="login.html" class="btn-entrar">
-                Entrar <i class="fa-solid fa-arrow-right-to-bracket"></i>
-            </a>
-
-            <a href="cadastro.html" class="btn-cadastrar">
-                Criar conta <i class="fa-regular fa-user"></i>
-            </a>
-
-        </div>
-
-    </header>
-
+?>
 
     <!-- BANNER PRINCIPAL -->
     <section class="hero">
 
-        <div class="hero-conteudo">
-
-            <span class="etiqueta">SOBRE NÓS</span>
+        <!--<div class="hero-conteudo">
 
             <h1>
                 Uma ideia que<br>
@@ -64,7 +23,7 @@
 
             <div class="linha-verde"></div>
 
-        </div>
+        </div> -->
 
         <div class="hero-imagem">
           <!--  <img src="/vacine_ai/imgs/alunos-senac.png" alt="">-->
@@ -125,9 +84,9 @@
 
             <div class="solucao-card">
 
-                <div class="solucao-icone">
+                <!-- <div class="solucao-icone">
                     <img src="IMG/calendario.png" alt="Calendário de vacinação">
-                </div>
+                </div>  -->
 
                 <div class="solucao-conteudo">
 
@@ -164,9 +123,9 @@
 
             <div class="solucao-card">
 
-                <div class="solucao-icone">
-                    <img src="IMG/escudo.png" alt="Escudo de proteção">
-                </div>
+                <!--<div class="solucao-icone">
+                    <img src="/vacine_ai/imgs/ESCUDO-PROTECAO.jpg" alt="Escudo de proteção">
+                </div> -->
 
                 <div class="solucao-conteudo">
 
@@ -328,7 +287,7 @@
         <!-- ASSINATURA SENAC + VACINEAÍ -->
         <section class="assinatura">
 
-            <img src="IMG/senac.png" alt="Logo SENAC">
+            <img src="/vacine_ai/imgs/senac.png" alt="logo">
 
             <div class="divisor"></div>
 
@@ -347,46 +306,7 @@
 
 
     <!-- RODAPÉ -->
-    <footer class="footer">
 
-        <div class="footer-logo">
-
-            <img src="IMG/logo.png" alt="VacineAí">
-
-            <p>Cuidar da sua saúde nunca foi tão fácil.</p>
-
-        </div>
-
-        <nav class="footer-menu">
-
-            <a href="index.html">Início</a>
-            <a href="sobre.html">Sobre nós</a>
-            <a href="duvidas.html">Dúvidas</a>
-            <a href="contato.html">Contatos</a>
-
-        </nav>
-
-        <div class="redes-sociais">
-
-            <a href="#" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a href="#" aria-label="Facebook">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-
-            <a href="#" aria-label="Twitter">
-                <i class="fa-brands fa-twitter"></i>
-            </a>
-
-            <a href="#" aria-label="YouTube">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-
-        </div>
-
-    </footer>
-
-</body>
-</html>
+<?php
+require_once __DIR__ . "/../templates/_rodape.php";
+?>
