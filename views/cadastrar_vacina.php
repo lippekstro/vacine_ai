@@ -67,7 +67,7 @@ $vacinas = Vacina::listar();
                         type="date"
                         name="proxima_vacinacao"
                         id="proxima_vacinacao"
-                        disabled>
+                        readonly>
                 </div>
 
                 <button type="submit" class="botao-cadastrar">
@@ -90,108 +90,99 @@ $vacinas = Vacina::listar();
         const dataAplicacao = document.getElementById('data_aplicacao');
         const proximaVacinacao = document.getElementById('proxima_vacinacao');
 
+        // Guarda os dados da vacina selecionada
         let periodo = 0;
+        let quantidadeDoses = 0;
 
-        // Seleção da vacina
-        selectVacina.addEventListener('change', function() {
+        function carregarDoses() {
 
-            const opcaoSelecionada = selectVacina.options[
-                selectVacina.selectedIndex
-            ];
+            const opcao = selectVacina.options[selectVacina.selectedIndex];
 
-            const quantidadeDoses = parseInt(
-                opcaoSelecionada.dataset.doses,
-                10
-            );
+            quantidadeDoses = parseInt(opcao.dataset.doses, 10);
+            periodo = parseInt(opcao.dataset.periodo, 10);
 
-            periodo = parseInt(
-                opcaoSelecionada.dataset.periodo,
-                10
-            );
-
-            // Limpa as opções anteriores
             selectDose.innerHTML = '';
 
-            // Limpa as datas
             dataAplicacao.value = '';
             proximaVacinacao.value = '';
-            proximaVacinacao.disabled = true;
 
-            // Verifica se uma vacina foi selecionada
+            proximaVacinacao.readOnly = true;
+
             if (!selectVacina.value || isNaN(quantidadeDoses)) {
 
                 selectDose.disabled = true;
-
-                selectDose.add(new Option(
-                    'Selecione primeiro uma vacina',
-                    ''
-                ));
+                selectDose.add(new Option('Selecione primeiro uma vacina', ''));
 
                 return;
             }
 
-            // Adiciona opção inicial
             selectDose.add(new Option('Selecione uma dose', ''));
 
-            // Se tiver apenas uma dose
-            if (quantidadeDoses === 1) {
+            for (let i = 1; i <= quantidadeDoses; i++) {
 
-                selectDose.add(new Option('Dose Única', 1));
+                const nome = quantidadeDoses === 1 ?
+                    'Dose Única' :
+                    `${i}ª dose`;
 
-            } else {
-
-                // Cria as doses dinamicamente
-                for (let i = 1; i <= quantidadeDoses; i++) {
-
-                    selectDose.add(new Option(`${i}ª dose`, i));
-
-                }
-
+                selectDose.add(new Option(nome, i));
             }
 
-            // Libera o campo
             selectDose.disabled = false;
-        });
+        }
 
 
-        // Seleção da data da aplicação
-        dataAplicacao.addEventListener('change', function() {
+        function calcularProximaVacinacao() {
 
             const dataSelecionada = dataAplicacao.value;
+            const doseSelecionada = parseInt(selectDose.value, 10);
 
-            if (!dataSelecionada) {
+            // Limpa a data inicialmente
+            proximaVacinacao.value = '';
 
-                proximaVacinacao.value = '';
-                proximaVacinacao.disabled = true;
+            // Verifica se os campos foram preenchidos
+            if (!dataSelecionada || isNaN(doseSelecionada)) {
 
+                proximaVacinacao.readOnly = true;
                 return;
             }
 
-            // Se não houver período, não existe sugestão
+            // Verifica se é a última dose
+            if (doseSelecionada >= quantidadeDoses) {
+
+                proximaVacinacao.readOnly = true;
+                return;
+            }
+
+            // Verifica se existe período cadastrado
             if (isNaN(periodo) || periodo <= 0) {
 
-                proximaVacinacao.value = '';
-                proximaVacinacao.disabled = true;
-
+                proximaVacinacao.readOnly = true;
                 return;
             }
 
+            // Calcula a próxima vacinação
             const data = new Date(dataSelecionada + 'T12:00:00');
 
-            // Soma o período em dias
             data.setDate(data.getDate() + periodo);
 
             const ano = data.getFullYear();
             const mes = String(data.getMonth() + 1).padStart(2, '0');
             const dia = String(data.getDate()).padStart(2, '0');
 
-            const dataCalculada = `${ano}-${mes}-${dia}`;
+            proximaVacinacao.value = `${ano}-${mes}-${dia}`;
 
-            // Libera o campo e sugere a data
-            proximaVacinacao.disabled = false;
-            proximaVacinacao.value = dataCalculada;
+            proximaVacinacao.readOnly = true;
+        }
 
-        });
+
+        // Quando selecionar uma vacina
+        selectVacina.addEventListener('change', carregarDoses);
+
+        // Quando selecionar uma dose
+        selectDose.addEventListener('change', calcularProximaVacinacao);
+
+        // Quando selecionar a data de aplicação
+        dataAplicacao.addEventListener('change', calcularProximaVacinacao);
 
     });
 </script>

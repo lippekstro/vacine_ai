@@ -13,7 +13,7 @@ $usuario = $_SESSION['id_usuario'];
 $vacina = (int)$_POST['vacina'];
 $dose = (int)$_POST['dose'];
 $dt_aplicacao = $_POST['data_aplicacao'];
-$dt_proxima = $_POST['proxima_vacinacao'];
+$dt_proxima = !empty($_POST['proxima_vacinacao']) ? $_POST['proxima_vacinacao'] : null;
 
 $vacinacao = new Vacinacao();
 $vacinacao->setId_usuario($usuario);
