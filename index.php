@@ -1,4 +1,3 @@
-
 <?php
 require_once __DIR__ . "/templates/_cabecalho.php";
 require_once __DIR__ . "/models/vacinacao.php";
@@ -38,8 +37,7 @@ if (Autenticacao::isLogado()) {
             <img
                 class="imagem-principal-img"
                 src="/vacine_ai/imgs/familia.png"
-                alt=""
-            >
+                alt="">
 
         </div>
 
@@ -94,13 +92,15 @@ if (Autenticacao::isLogado()) {
 
                                 <td>
                                     <p>
-                                        <?= htmlspecialchars($resutado[$i]['dt_proxima']); ?>
+                                        <?= date('d/m/Y', strtotime(htmlspecialchars($resutado[$i]['dt_proxima']))) ?>
                                     </p>
                                 </td>
 
                             </tr>
 
-                            <?php if ($i == 1) { break; } ?>
+                            <?php if ($i == 1) {
+                                break;
+                            } ?>
 
                         <?php endfor; ?>
 
@@ -120,8 +120,7 @@ if (Autenticacao::isLogado()) {
                 <div alarme-icone>
                     <img
                         src="/vacine_ai/imgs/telefone.png"
-                        alt=""
-                    >
+                        alt="">
                 </div>
 
                 <div class="alarme-info">
@@ -154,13 +153,12 @@ if (Autenticacao::isLogado()) {
          SESSAO DO CARROSSEL
     ------------------------------------ -->
 
-    <section class="container">
+    <section class="container mb-3">
 
         <div
             id="carouselExampleAutoplaying"
             class="carousel slide"
-            data-bs-ride="carousel"
-        >
+            data-bs-ride="carousel">
 
             <div class="carousel-inner">
 
@@ -169,8 +167,7 @@ if (Autenticacao::isLogado()) {
                     <img
                         src="/vacine_ai/imgs/banner-6.jpg"
                         class="d-block w-100"
-                        alt="..."
-                    >
+                        alt="...">
                 </div>
 
                 <!-- img 02 -->
@@ -178,8 +175,7 @@ if (Autenticacao::isLogado()) {
                     <img
                         src="/vacine_ai/imgs/banner-7.jpg"
                         class="d-block w-100"
-                        alt="..."
-                    >
+                        alt="...">
                 </div>
 
                 <!-- img 03 -->
@@ -187,8 +183,7 @@ if (Autenticacao::isLogado()) {
                     <img
                         src="/vacine_ai/imgs/banner-8.jpg"
                         class="d-block w-100"
-                        alt="..."
-                    >
+                        alt="...">
                 </div>
 
                 <!-- img 04 -->
@@ -196,8 +191,7 @@ if (Autenticacao::isLogado()) {
                     <img
                         src="/vacine_ai/imgs/banner-9.jpg"
                         class="d-block w-100"
-                        alt="..."
-                    >
+                        alt="...">
                 </div>
 
                 <!-- img 05 -->
@@ -205,8 +199,7 @@ if (Autenticacao::isLogado()) {
                     <img
                         src="/vacine_ai/imgs/banner-10.jpg"
                         class="d-block w-100"
-                        alt="..."
-                    >
+                        alt="...">
                 </div>
 
             </div>
@@ -215,12 +208,10 @@ if (Autenticacao::isLogado()) {
                 class="carousel-control-prev"
                 type="button"
                 data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="prev"
-            >
+                data-bs-slide="prev">
                 <span
                     class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                ></span>
+                    aria-hidden="true"></span>
 
                 <span class="visually-hidden">
                     Previous
@@ -231,12 +222,10 @@ if (Autenticacao::isLogado()) {
                 class="carousel-control-next"
                 type="button"
                 data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="next"
-            >
+                data-bs-slide="next">
                 <span
                     class="carousel-control-next-icon"
-                    aria-hidden="true"
-                ></span>
+                    aria-hidden="true"></span>
 
                 <span class="visually-hidden">
                     Next

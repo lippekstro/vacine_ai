@@ -83,6 +83,19 @@ class Vacinacao
         }
     }
 
+    public function deletar()
+    {
+        try {
+            $conexao = Conexao::conectar();
+            $sql = "DELETE FROM vacinacao WHERE id_vacinacao = :id";
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindvalue(':id', $this->getId_vacinacao());
+            $stmt->execute();
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
     public static function listarTomadasPorUsuario($id_usuario)
     {
         try {

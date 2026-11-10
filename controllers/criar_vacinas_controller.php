@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/../auth/autenticacao.php";
+require_once __DIR__ . "/../models/vacinas.php";
 
 if (!Autenticacao::isLogado()) {
     header('Location: /vacine_ai/views/login.php');
@@ -17,5 +18,5 @@ $vacinas->setPeriodo($periodo);
 
 $vacinas->criar();
 
-header('Location: /vacine_ai/index.php');
+header('Location: /vacine_ai/views/gerenciar_vacinas_site.php');
 exit;

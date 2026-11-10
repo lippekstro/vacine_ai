@@ -81,9 +81,20 @@ $faltantes = Vacinacao::listarFaltantesPorUsuario($_SESSION['id_usuario']);
                     <i class="bi bi-calendar-check"></i>
                     Aplicada em <?= date('d/m/Y', strtotime($v['dt_aplicacao']))  ?>
                   </p>
-                  <a href="/vacine_ai/views/editar_vacina.php?id=<?= $v['id_vacinacao'] ?>" class="btn btn-primary">
-                    <i class="bi bi-pencil-square"></i> Editar Vacinas
-                  </a>
+
+                  <div class="d-flex m-1">
+                    <a href="/vacine_ai/views/editar_vacina.php?id=<?= $v['id_vacinacao'] ?>" class="btn btn-outline-primary btn-sm mx-1">
+                      Editar Vacinas
+                    </a>
+
+                    <form action="/vacine_ai/controllers/deletar_vacina_controller.php" method="POST" onsubmit="return confirm('Voce tem certeza que quer deletar o registro?')">
+                      <input type="hidden" name="id" value="<?= (int) $v['id_vacinacao'] ?>">
+
+                      <button type="submit" class="btn btn-outline-danger btn-sm mx-1">
+                        Excluir
+                      </button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>

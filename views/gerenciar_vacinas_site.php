@@ -76,7 +76,7 @@ $vacinas = Vacina::listar();
 
                             <tr>
 
-                               
+
 
                                 <td class="fw-semibold">
                                     <?= htmlspecialchars($vacina['nome']) ?>
@@ -91,28 +91,26 @@ $vacinas = Vacina::listar();
                                     </span>
                                 </td>
 
-                              
+
 
                                 <td>
                                     <div class="d-flex justify-content-center gap-2">
 
                                         <!-- Editar -->
                                         <a
-                                            href="/vacine_ai/views/editar_vacina.php?id=<?= (int) $vacina['id_vacina'] ?>"
+                                            href="/vacine_ai/views/editar_vacina_admin.php?id=<?= (int) $vacina['id_vacina'] ?>"
                                             class="btn btn-outline-primary btn-sm">
                                             <i class="bi bi-pencil-square"></i>
                                             Editar
                                         </a>
 
-                                        <!-- Excluir: apenas visual -->
-                                        <a
-                                            href="#"
-                                            class="btn btn-outline-danger btn-sm"
-                                            aria-disabled="true"
-                                            onclick="return false;">
-                                            <i class="bi bi-trash"></i>
-                                            Excluir
-                                        </a>
+                                        <form action="/vacine_ai/controllers/deletar_vacina_admin_controller.php" method="POST" onsubmit="return confirm('Voce tem certeza que quer deletar o registro?')">
+                                            <input type="hidden" name="id" value="<?= (int) $vacina['id_vacina'] ?>">
+
+                                            <button type="submit" class="btn btn-outline-danger btn-sm">
+                                                Excluir
+                                            </button>
+                                        </form>
 
                                     </div>
                                 </td>
