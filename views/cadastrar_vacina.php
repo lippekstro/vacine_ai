@@ -66,8 +66,7 @@ $vacinas = Vacina::listar();
                     <input
                         type="date"
                         name="proxima_vacinacao"
-                        id="proxima_vacinacao"
-                        readonly>
+                        id="proxima_vacinacao">
                 </div>
 
                 <button type="submit" class="botao-cadastrar">
@@ -106,8 +105,6 @@ $vacinas = Vacina::listar();
             dataAplicacao.value = '';
             proximaVacinacao.value = '';
 
-            proximaVacinacao.readOnly = true;
-
             if (!selectVacina.value || isNaN(quantidadeDoses)) {
 
                 selectDose.disabled = true;
@@ -136,31 +133,19 @@ $vacinas = Vacina::listar();
             const dataSelecionada = dataAplicacao.value;
             const doseSelecionada = parseInt(selectDose.value, 10);
 
-            // Limpa a data inicialmente
-            proximaVacinacao.value = '';
-
-            // Verifica se os campos foram preenchidos
             if (!dataSelecionada || isNaN(doseSelecionada)) {
-
-                proximaVacinacao.readOnly = true;
                 return;
             }
 
-            // Verifica se é a última dose
             if (doseSelecionada >= quantidadeDoses) {
-
-                proximaVacinacao.readOnly = true;
+                proximaVacinacao.value = '';
                 return;
             }
 
-            // Verifica se existe período cadastrado
             if (isNaN(periodo) || periodo <= 0) {
-
-                proximaVacinacao.readOnly = true;
                 return;
             }
 
-            // Calcula a próxima vacinação
             const data = new Date(dataSelecionada + 'T12:00:00');
 
             data.setDate(data.getDate() + periodo);
@@ -169,11 +154,9 @@ $vacinas = Vacina::listar();
             const mes = String(data.getMonth() + 1).padStart(2, '0');
             const dia = String(data.getDate()).padStart(2, '0');
 
+            // Apenas sugere a data, permitindo alteração manual
             proximaVacinacao.value = `${ano}-${mes}-${dia}`;
-
-            proximaVacinacao.readOnly = true;
         }
-
 
         // Quando selecionar uma vacina
         selectVacina.addEventListener('change', carregarDoses);

@@ -93,8 +93,7 @@ $vacinacao = new Vacinacao($id);
                         type="date"
                         name="proxima_vacinacao"
                         id="proxima_vacinacao"
-                        value="<?= $vacinacao->getDt_proxima() ?>"
-                        readonly>
+                        value="<?= $vacinacao->getDt_proxima() ?>">
                 </div>
 
                 <button type="submit" class="botao-cadastrar">
@@ -166,29 +165,23 @@ $vacinacao = new Vacinacao($id);
             const dataSelecionada = dataAplicacao.value;
             const doseSelecionada = parseInt(selectDose.value, 10);
 
-            // Limpa a data anterior
-            proximaVacinacao.value = '';
-
+            // Se os campos não estiverem preenchidos
             if (!dataSelecionada || isNaN(doseSelecionada)) {
-
-                proximaVacinacao.readOnly = true;
                 return;
             }
 
-            // Última dose: não existe próxima data
+            // Última dose: não existe próxima vacinação
             if (doseSelecionada >= quantidadeDoses) {
-
-                proximaVacinacao.readOnly = true;
+                proximaVacinacao.value = '';
                 return;
             }
 
             // Sem período cadastrado
             if (isNaN(periodo) || periodo <= 0) {
-
-                proximaVacinacao.readOnly = true;
                 return;
             }
 
+            // Calcula a próxima vacinação
             const data = new Date(dataSelecionada + 'T12:00:00');
 
             data.setDate(data.getDate() + periodo);
@@ -198,16 +191,11 @@ $vacinacao = new Vacinacao($id);
             const dia = String(data.getDate()).padStart(2, '0');
 
             proximaVacinacao.value = `${ano}-${mes}-${dia}`;
-
-            proximaVacinacao.readOnly = true;
         }
 
 
         // Inicializa mantendo a dose e a data da aplicação
         carregarDoses(true);
-
-        // Recalcula ao abrir a página
-        calcularProximaVacinacao();
 
 
         // Ao trocar a vacina

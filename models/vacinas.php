@@ -35,7 +35,7 @@ class Vacina
     {
         try {
             $conexao = Conexao::conectar();
-            $sql = "SELECT * FROM vacina";
+            $sql = "SELECT * FROM vacina ORDER BY nome";
             $stmt = $conexao->prepare($sql);
             $stmt->execute();
             $lista = $stmt->fetchAll();

@@ -32,6 +32,12 @@ class Autenticacao
 
             header('Location: /vacine_ai/views/perfil.php');
             exit();
+        } else {
+            $_SESSION['tipo_alerta'] = 'danger';
+            $_SESSION['alerta_msg'] = 'Conta não existe!';
+
+            header('Location: /vacine_ai/views/login.php');
+            exit;
         }
     }
 

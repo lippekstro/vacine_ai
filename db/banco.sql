@@ -14,7 +14,7 @@ CREATE TABLE usuario (
     foto VARCHAR(255),
     nivel_acesso INT NOT NULL DEFAULT 1,
     telefone VARCHAR(20),
-    cpf VARCHAR(11) NOT NULL UNIQUE
+    cpf VARCHAR(20) NOT NULL UNIQUE
 );
 
 CREATE TABLE vacina (
