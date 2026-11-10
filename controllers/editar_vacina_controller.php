@@ -21,10 +21,10 @@ $vacinacao->setId_vacina($vacina);
 $vacinacao->setDose($dose);
 $vacinacao->setDt_ultima($dt_aplicacao);
 $vacinacao->setDt_proxima($dt_proxima);
-
 $vacinacao->atualizar();
 
-
+$_SESSION['tipo_alerta'] = 'info'; // define a cor da msg
+$_SESSION['alerta_msg'] = "Vacina atualizada com sucesso!"; // define a msg
 
 header('Location: /vacine_ai/views/exibir_vacinas.php');
 exit();

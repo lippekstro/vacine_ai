@@ -15,8 +15,10 @@ $vacinas = new Vacina();
 $vacinas->setNome($nome_vacina);
 $vacinas->setQtd($qtd_doses);
 $vacinas->setPeriodo($periodo);
-
 $vacinas->criar();
+
+$_SESSION['tipo_alerta'] = 'success'; // define a cor da msg
+$_SESSION['alerta_msg'] = 'Nova vacina criada no sistema com sucesso!'; // define a msg
 
 header('Location: /vacine_ai/views/gerenciar_vacinas_site.php');
 exit;

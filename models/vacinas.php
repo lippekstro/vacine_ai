@@ -47,15 +47,11 @@ class Vacina
 
     public function deletar()
     {
-        try {
-            $conexao = Conexao::conectar();
-            $sql = "DELETE FROM vacina WHERE id_vacina = :id";
-            $stmt = $conexao->prepare($sql);
-            $stmt->bindvalue(':id', $this->getId());
-            $stmt->execute();
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
+        $conexao = Conexao::conectar();
+        $sql = "DELETE FROM vacina WHERE id_vacina = :id";
+        $stmt = $conexao->prepare($sql);
+        $stmt->bindvalue(':id', $this->getId());
+        $stmt->execute();
     }
 
     public function atualizar()

@@ -23,7 +23,8 @@ $vacinacao->setDt_ultima($dt_aplicacao);
 $vacinacao->setDt_proxima($dt_proxima);
 $vacinacao->inserir();
 
-
+$_SESSION['tipo_alerta'] = 'success'; // define a cor da msg
+$_SESSION['alerta_msg'] = 'Vacina adicionada com sucesso!'; // define a msg
 
 header('Location: /vacine_ai/views/exibir_vacinas.php');
 exit();

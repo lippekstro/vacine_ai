@@ -104,3 +104,7 @@ require_once __DIR__ . "/../auth/autenticacao.php";
             </div>
         <?php endif; ?>
     </header>
+
+    <?php
+    require_once __DIR__ . "/_alertas.php";
+    ?>
