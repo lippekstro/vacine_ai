@@ -11,9 +11,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
         <section class="login-illustration">
 
             <div class="brand">
-                <span class="material-symbols-outlined brand-icon">
-                    health_and_safety
-                </span>
+                <img src="/vacine_ai/imgs/logo2.png" alt="logo">
 
                 <span class="brand-name">
                     Vacine<span>Ai</span>
@@ -37,30 +35,23 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
             <div class="benefits">
 
                 <div class="benefit">
-                    <span class="material-symbols-outlined">
-                        calendar_month
-                    </span>
+                    <img src="/vacine_ai/imgs/calendar_month.png" alt="logo">
+
                     <p>Organize<br>sua carteira</p>
                 </div>
 
                 <div class="benefit">
-                    <span class="material-symbols-outlined">
-                        notifications_active
-                    </span>
+                    <img src="/vacine_ai/imgs/notifications_active.png" alt="logo">
                     <p>Receba<br>lembretes</p>
                 </div>
 
                 <div class="benefit">
-                    <span class="material-symbols-outlined">
-                        groups
-                    </span>
+                    <img src="/vacine_ai/imgs/groups.png" alt="logo">
                     <p>Para toda<br>a família</p>
                 </div>
 
                 <div class="benefit">
-                    <span class="material-symbols-outlined">
-                        verified_user
-                    </span>
+                    <img src="/vacine_ai/imgs/verified_user.png" alt="logo">
                     <p>Segurança<br>e privacidade</p>
                 </div>
 
@@ -72,9 +63,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
         <section class="login-card">
 
             <div class="login-icon">
-                <span class="material-symbols-outlined">
-                    lock
-                </span>
+                <img src="/vacine_ai/imgs/lock.png" alt="logo">
             </div>
 
             <h1>Bem-vindo(a)!</h1>
@@ -92,14 +81,12 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                 <div class="form-group">
 
                     <label for="email">
-                        E-mail ou CPF
+                        E-mail
                     </label>
 
                     <div class="input-box">
 
-                        <span class="material-symbols-outlined">
-                            person
-                        </span>
+                        <img src="/vacine_ai/imgs/person.png" alt="logo">
 
                         <input
                             type="text"
@@ -122,9 +109,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
                     <div class="input-box">
 
-                        <span class="material-symbols-outlined">
-                            lock
-                        </span>
+                        <img src="/vacine_ai/imgs/lock_preto.png" alt="logo">
 
                         <input
                             type="password"
@@ -153,9 +138,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                 <!-- ENTRAR -->
                 <button type="submit" class="btn-enter">
 
-                    <span class="material-symbols-outlined">
-                        login
-                    </span>
+                    <img src="/vacine_ai/imgs/login.png" alt="logo">
 
                     Entrar
 

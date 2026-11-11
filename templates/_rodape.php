@@ -8,7 +8,7 @@
 
             <div class="footer-brand">
                 <h2>
-                    <i class="fa-solid fa-shield-heart"></i>
+                    <img src="/vacine_ai/imgs/health_and_safety_branco.png" alt="logo">
                     VacineAí
                 </h2>
         

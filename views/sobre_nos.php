@@ -66,7 +66,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
             <div class="historia-card">
 
-                <img src="IMG/ideia.png" alt="Ilustração de uma lâmpada">
+                <img src="/vacine_ai/imgs/lightbulb-solid.png" alt="Ilustração de uma lâmpada">
 
                 <h3>
                     Uma ideia do SENAC,<br>
@@ -96,22 +96,22 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
                     <ul>
                         <li>
-                            <i class="fa-solid fa-check"></i>
+                            <img src="/vacine_ai/imgs/circle-check-solid.png" alt="">
                             Esquecimento das vacinas
                         </li>
 
                         <li>
-                            <i class="fa-solid fa-check"></i>
+                            <img src="/vacine_ai/imgs/circle-check-solid.png" alt="">
                             Falta de organização da carteira
                         </li>
 
                         <li>
-                            <i class="fa-solid fa-check"></i>
+                            <img src="/vacine_ai/imgs/circle-check-solid.png" alt="">
                             Dificuldade em saber a próxima dose
                         </li>
 
                         <li>
-                            <i class="fa-solid fa-check"></i>
+                            <img src="/vacine_ai/imgs/circle-check-solid.png" alt="">
                             Acesso rápido às informações
                         </li>
                     </ul>
@@ -135,22 +135,22 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
                     <ul>
                         <li>
-                            <i class="fa-solid fa-check"></i>
+                            <img src="/vacine_ai/imgs/circle-check-solid.png" alt="">
                             Cadastro e acompanhamento de vacinas
                         </li>
 
                         <li>
-                            <i class="fa-solid fa-check"></i>
+                            <img src="/vacine_ai/imgs/circle-check-solid.png" alt="">
                             Lembretes de próximas doses
                         </li>
 
                         <li>
-                            <i class="fa-solid fa-check"></i>
+                            <img src="/vacine_ai/imgs/circle-check-solid.png" alt="">
                             Gestão da saúde da sua família
                         </li>
 
                         <li>
-                            <i class="fa-solid fa-check"></i>
+                            <img src="/vacine_ai/imgs/circle-check-solid.png" alt="">
                             Informações confiáveis
                         </li>
                     </ul>
@@ -176,7 +176,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
                 <div class="valor-item">
 
-                    <i class="fa-regular fa-heart"></i>
+                    <img src="/vacine_ai/imgs/heart-solid.png" alt="">
 
                     <h3>Prevenção</h3>
 
@@ -190,7 +190,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
                 <div class="valor-item">
 
-                    <i class="fa-solid fa-users"></i>
+                    <img src="/vacine_ai/imgs/users-solid.png" alt="">
 
                     <h3>Acessibilidade</h3>
 
@@ -204,7 +204,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
                 <div class="valor-item">
 
-                    <i class="fa-solid fa-shield-halved"></i>
+                    <img src="/vacine_ai/imgs/shield-halved-solid.png" alt="">
 
                     <h3>Responsabilidade</h3>
 
@@ -218,7 +218,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
                 <div class="valor-item">
 
-                    <i class="fa-solid fa-handshake"></i>
+                    <img src="/vacine_ai/imgs/handshake-solid.png" alt="">
 
                     <h3>Trabalho em equipe</h3>
 
@@ -239,7 +239,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
             <div class="agradecimento-icone">
 
-                <i class="fa-solid fa-hands-holding-circle"></i>
+                <img src="/vacine_ai/imgs/hands-holding-circle-solid.png" alt="">
 
             </div>
 
@@ -268,14 +268,13 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
             <div class="professor">
 
-                <img src="IMG/professor.jpg"
-                     alt="Foto do professor orientador">
+                <img src="/vacine_ai/imgs/maui.jpg" alt="">
 
                 <div class="professor-nome">
 
                     <h3>Prof. Orientador</h3>
 
-                    <p>Nome do Professor</p>
+                    <p>Luis Fellipe</p>
 
                 </div>
 

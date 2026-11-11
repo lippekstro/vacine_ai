@@ -10,7 +10,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
     <main>
 
         <!-- HERO -->
-        <section class="">
+        <section class="mt-3">
 
             <div class="hero-texto">
 
@@ -26,15 +26,6 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
                     mais frequentes sobre o VacineAí.
                 </p>
 
-            </div>
-
-            <div class="hero-imagem">
-                <div class="ilustracao">
-                    <span class="interrogacao">?</span>
-                    <span class="escudo">✚</span>
-                    <span class="calendario">📅</span>
-                    <span class="pessoa">💻</span>
-                </div>
             </div>
 
         </section>

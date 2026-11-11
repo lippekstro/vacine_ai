@@ -20,7 +20,7 @@ $faltantes = Vacinacao::listarFaltantesPorUsuario($_SESSION['id_usuario']);
     <div class="card shadow-sm mb-4">
       <div class="card-body d-flex align-items-center gap-3 flex-wrap">
         <?php if ($usuario->getFoto() != null): ?>
-          <img src="/vacine_ai/imgs/fotos/<?= htmlspecialchars($usuario->getFoto()) ?>" alt="Foto de perfil" class="rounded-circle img-thumbnail mb-3" width="80" height="80" style="object-fit: cover; min-width: 80px; min-height: 80px">
+          <img src="/vacine_ai/imgs/fotos/<?= htmlspecialchars($usuario->getFoto()) ?>" alt="Foto de perfil" class="rounded-circle border" width="80" height="80" style="object-fit: cover; min-width: 80px; min-height: 80px">
         <?php else: ?>
           <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center" style="width: 80px; height: 80px">
             <?= mb_strtoupper(mb_substr($usuario->getNome(), 0, 1)) ?>
