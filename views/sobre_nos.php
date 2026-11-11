@@ -66,7 +66,7 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
             <div class="historia-card">
 
-                <img src="IMG/ideia.png" alt="Ilustração de uma lâmpada">
+                <img src="/vacine_ai/imgs/lampada.png" alt="Ilustração de uma lâmpada">
 
                 <h3>
                     Uma ideia do SENAC,<br>
@@ -268,14 +268,14 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
             <div class="professor">
 
-                <img src="IMG/professor.jpg"
+                <img src="/vacine_ai/imgs/professor_orientador.jpg"
                      alt="Foto do professor orientador">
 
                 <div class="professor-nome">
 
-                    <h3>Prof. Orientador</h3>
+                    <h3>Prof. Me. Orientador</h3>
 
-                    <p>Nome do Professor</p>
+                    <p>Luis Fillipe Castro Silva</p>
 
                 </div>
 

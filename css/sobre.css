@@ -232,8 +232,9 @@ main {
 }
 
 .historia-card img {
-    width: 125px;
-    object-fit: contain;
+    width: 200px;
+    height: 200px;
+   
 }
 
 .historia-card h3 {

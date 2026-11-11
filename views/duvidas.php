@@ -7,205 +7,176 @@ require_once __DIR__ . "/../templates/_cabecalho.php";
 
 
     <!-- CONTEÚDO PRINCIPAL -->
-    <main>
-
-        <!-- HERO -->
-        <section class="">
-
-            <div class="hero-texto">
-
-                <span class="etiqueta">DÚVIDAS</span>
-
-                <h1>
-                    Tem alguma dúvida?
-                    <span>Estamos aqui para ajudar.</span>
-                </h1>
-
-                <p>
-                    Encontre respostas para as perguntas
-                    mais frequentes sobre o VacineAí.
-                </p>
-
-            </div>
-
-            <div class="hero-imagem">
-                <div class="ilustracao">
-                    <span class="interrogacao">?</span>
-                    <span class="escudo">✚</span>
-                    <span class="calendario">📅</span>
-                    <span class="pessoa">💻</span>
-                </div>
-            </div>
-
-        </section>
 
 
-        <!-- PESQUISA -->
-        <section class="pesquisa">
 
-            <input
-                type="text"
-                id="buscarDuvida"
-                placeholder="Digite sua dúvida..."
-            >
+<main class="pagina-duvidas">
 
-            <button type="button">⌕</button>
+    <!-- APRESENTAÇÃO -->
 
-        </section>
+    <section class="duvidas-intro">
 
+        <div class="duvidas-container">
 
-        <!-- PERGUNTAS FREQUENTES -->
-        <section class="faq">
+            <span class="duvidas-etiqueta">
+                Central de ajuda
+            </span>
 
-            <div class="titulo-secao">
-                <h2>Perguntas frequentes</h2>
-                <p>
-                    Confira algumas respostas que podem ajudar você.
-                </p>
-            </div>
+            <h1>
+                Como podemos ajudar você?
+            </h1>
 
-
-            <div class="faq-container">
-
-                <div class="faq-item">
-
-                    <button class="pergunta">
-                        <span>O que é o VacineAí?</span>
-                        <span class="seta">+</span>
-                    </button>
-
-                    <div class="resposta">
-                        <p>
-                            O VacineAí é um sistema digital que ajuda
-                            você a cadastrar, organizar e acompanhar
-                            as vacinas da sua família.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="faq-item">
-
-                    <button class="pergunta">
-                        <span>Como faço para cadastrar minhas vacinas?</span>
-                        <span class="seta">+</span>
-                    </button>
-
-                    <div class="resposta">
-                        <p>
-                            Acesse sua conta, entre na área
-                            Minhas Vacinas e informe os dados
-                            da dose recebida.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="faq-item">
-
-                    <button class="pergunta">
-                        <span>O VacineAí envia lembretes das próximas doses?</span>
-                        <span class="seta">+</span>
-                    </button>
-
-                    <div class="resposta">
-                        <p>
-                            O sistema ajuda você a acompanhar
-                            as próximas doses e identificar
-                            quais vacinas precisam de atenção.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="faq-item">
-
-                    <button class="pergunta">
-                        <span>Posso cadastrar vacinas de toda a família?</span>
-                        <span class="seta">+</span>
-                    </button>
-
-                    <div class="resposta">
-                        <p>
-                            O cadastro permite organizar as informações
-                            de vacinação conforme os perfis
-                            disponibilizados pelo sistema.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="faq-item">
-
-                    <button class="pergunta">
-                        <span>Meus dados ficam protegidos?</span>
-                        <span class="seta">+</span>
-                    </button>
-
-                    <div class="resposta">
-                        <p>
-                            O VacineAí busca tratar as informações
-                            dos usuários com responsabilidade,
-                            respeitando a privacidade e os cuidados
-                            necessários com os dados pessoais.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="faq-item">
-
-                    <button class="pergunta">
-                        <span>O VacineAí substitui a carteira de vacinação?</span>
-                        <span class="seta">+</span>
-                    </button>
-
-                    <div class="resposta">
-                        <p>
-                            Não. O VacineAí é uma ferramenta de
-                            organização e acompanhamento.
-                            A carteira de vacinação oficial
-                            continua sendo importante.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <p class="sem-resultado" id="semResultado">
-                Nenhuma dúvida encontrada.
+            <p>
+                Reunimos algumas respostas para as dúvidas mais
+                comuns sobre o VacineAí. Encontre aqui as informações
+                que precisa para aproveitar melhor nosso sistema.
             </p>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- ÁREA DE CONTATO -->
-        <section class="ajuda">
+    <!-- PERGUNTAS FREQUENTES -->
 
-            <div class="ajuda-icone">✉</div>
+    <section class="duvidas-conteudo">
 
-            <div class="ajuda-texto">
-                <h2>Ainda precisa de ajuda?</h2>
+        <div class="duvidas-container">
+
+            <div class="duvidas-titulo">
+                <h2>Perguntas frequentes</h2>
+
                 <p>
-                    Entre em contato com nossa equipe.
-                    Será um prazer ajudar!
+                    Confira as principais dúvidas sobre o VacineAí.
                 </p>
             </div>
 
-            <a href="contato.php" class="btn-contato">
-                Falar com a equipe
-            </a>
 
-        </section>
+            <div class="duvidas-lista">
 
-    </main>
+                <details class="duvida-item">
+                    <summary>
+                        O que é o VacineAí?
+                        <span class="duvida-seta">+</span>
+                    </summary>
 
+                    <p>
+                        O VacineAí é um sistema desenvolvido para
+                        ajudar as pessoas a organizar e acompanhar
+                        suas vacinas, facilitando o controle das doses
+                        e das próximas datas de vacinação.
+                    </p>
+                </details>
+
+
+                <details class="duvida-item">
+                    <summary>
+                        Como faço para criar uma conta?
+                        <span class="duvida-seta">+</span>
+                    </summary>
+
+                    <p>
+                        Basta acessar a opção "Criar conta", preencher
+                        seus dados e seguir as orientações apresentadas
+                        na tela para realizar seu cadastro.
+                    </p>
+                </details>
+
+
+                <details class="duvida-item">
+                    <summary>
+                        Como cadastrar minhas vacinas?
+                        <span class="duvida-seta">+</span>
+                    </summary>
+
+                    <p>
+                        Após entrar na sua conta, acesse a área
+                        "Cadastrar vacinas" e informe os dados da vacina,
+                        como nome, dose e data de aplicação.
+                    </p>
+                </details>
+
+
+                <details class="duvida-item">
+                    <summary>
+                        Posso acompanhar as próximas doses?
+                        <span class="duvida-seta">+</span>
+                    </summary>
+
+                    <p>
+                        Sim! O sistema permite visualizar as informações
+                        das vacinas cadastradas e acompanhar as próximas
+                        datas previstas para aplicação.
+                    </p>
+                </details>
+
+
+                <details class="duvida-item">
+                    <summary>
+                        O VacineAí substitui a carteira de vacinação?
+                        <span class="duvida-seta">+</span>
+                    </summary>
+
+                    <p>
+                        Não. O VacineAí é uma ferramenta complementar
+                        de organização. A carteira de vacinação oficial
+                        continua sendo importante e deve ser preservada.
+                    </p>
+                </details>
+
+
+                <details class="duvida-item">
+                    <summary>
+                        Meus dados ficam protegidos?
+                        <span class="duvida-seta">+</span>
+                    </summary>
+
+                    <p>
+                        O sistema foi desenvolvido considerando a
+                        importância da privacidade e da proteção das
+                        informações dos usuários. Consulte as orientações
+                        de privacidade da plataforma para saber mais.
+                    </p>
+                </details>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section class="duvidas-contato">
+
+        <div class="duvidas-container">
+
+            <div class="duvidas-contato-box">
+
+                <div>
+                    <h2>Ainda tem alguma dúvida?</h2>
+
+                    <p>
+                        Entre em contato conosco. Será um prazer
+                        ajudar você!
+                    </p>
+                </div>
+                    <a
+                    href="https://wa.me/5511999999999?text=Ol%C3%A1%21%20Gostaria%20de%20entrar%20em%20contato%20com%20o%20VacineA%C3%AD."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="duvidas-btn">
+                    Fale conosco
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
 
     <!-- RODAPÉ -->
 <?php

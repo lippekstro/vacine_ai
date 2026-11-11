@@ -89,7 +89,7 @@ require_once __DIR__ . "/../auth/autenticacao.php";
     </div>
 
   
-
+    <div class="menu-opcoes">    
             <?php if (Autenticacao::isLogado()): ?>
                 <a href="/vacine_ai/views/perfil.php" class="menu-link">Perfil</a>
                 <a href="/vacine_ai/views/cadastrar_vacina.php" class="menu-link">Cadastrar Vacina</a>
@@ -103,4 +103,5 @@ require_once __DIR__ . "/../auth/autenticacao.php";
                 <a href="/vacine_ai/views/cadastro_usuario.php" class="botoes">Criar Conta</a>
             </div>
         <?php endif; ?>
+    </div>
     </header>
